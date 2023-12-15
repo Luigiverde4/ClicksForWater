@@ -1,0 +1,84 @@
+Minimo (sobre 8 puntos):
+
+5 paginas HTML
+- 1 pagina de portada(landing page)
+- 3 paginas secundarias o de contenido especifico de la web
+- 1 página multimedia
+
+2 ficheros JavaScript
+- Deben ser importados por al menos dos de los documentos HTML
+- Un vector y distintas construcciones que incluyan operaciones aritméticas, comparaciones lógicas, if, switch etc
+- Implementar al menos 3 funciones
+- Todo esto a través de ficheros externos
+
+
+Header y footer
+- La páginas deben tener un estilo corporativo, especialmente en las cabeceeras
+- El header tendrá el logo diseñado y un lema
+- Las páginas secundarias deben tener una cabecera comñun que debe ser algo distina de la página principal
+
+CSS
+- 2 ficheros CSS como mínimo
+- Un archivo para la principal mínimo
+- Un archivo para el resto mínimo
+- Se importarán los archivos 
+
+Barra de navegación
+- Todos los documentos HTML deben tener una barra de navegación que permita navegar por las páginas
+
+Interactividad
+- Tienen que haber elementos interactivos como botones, eventos por el movimiento del ratón etc
+- Debe haber como minimo:
+	- Aparición y desaparición de objetos
+	- Cambios de estilo en elementos individuales como elementos agrupación
+	- Cambio de la estructura de la página (?????)
+	- Procesamiento de un formulario que genera una respuesta viable
+
+Formulario
+- 1 formulario con minimo 8 campos diferentes ( numero,texto,radio,casillas...)
+- Debe generar una respuesta visible para el usuario
+
+Semántico y accesible
+- Deben tener etiquetado semántico donde sea necesario
+
+Intermedio (Sobre 9 puntos):
+
+Contenedores Flex
+- Usar en página principal y secundarias
+- 2 contenedores minimo en flex que alberguen contenido
+
+Aside con barra de navegación
+- La página principal tendrá debajo de la cabecera dos áreas bien definidas:
+	- Una de contenido principal
+	- Una de contenido no principal pero si relacionado ( dentro de un aside con barra de navegación)
+
+Javascript
+- Variables globales que sean arrays de objetos, de strings y de números
+- Declaraciones de objetos de cierta complejidad (que incluyan campos de distintos tipos como nñumeros, strings , vectores y otros métodos)
+- Construcciones en JS, como operaciones aritméticas, booleanos etc
+- funciones
+
+Javascript y vectores de objetos:
+"Debe existir un
+vector de objetos (en notación de objetos de Java) que debe rellenarse con
+los valores extraídos del elemento formulario. Deberán realizarse operaciones aritméticas y de comparación sobre los elementos de este vector desde al
+menos 2 funciones distintas (es decir, el vector debe ser global). Por ejemplo,
+si almacena un registro de personas, puede definir un vector de objetos persona
+como el que se muestra en teoría donde cada objeto contendrá distintas propiedades o campos como nombre, teléfono, edad, etc. Podrá calcular un
+descuento para cada persona según el número de elementos del vector (número
+de personas), su edad y otros parámetros.
+El resultado de la codificación JavaScript deberá presentarse de forma visible
+al usuario como contenido dentro de ciertos elementos de su página"
+
+Completo (sobre 10 puntos):
+
+Gestión de eventos de arrastre 
+- Arrastrar elementos de un contenedor a otro ej: implementación de un carrito de la compra
+
+Elementos multimedia
+- Utiizar grid con 20 imagenes y videos ( baja resolucioón para que no supere el tamaño maximo indicado)
+No se permite utilizar ningún contenido multimedia que pueda resultar ofensivo (esto incluye letras, imágenes,
+etc.) hacia ningún colectivo ni persona por cualquier razón.
+
+
+IDEA: Countdown de tiempo para que la web este activa
