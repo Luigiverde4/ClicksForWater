@@ -4,13 +4,13 @@
 # INSTRUCCIONES
 
 Al comenzar el trabajo:
-- git pull origin master
+- git pull
 
 Al acabar
 
 - git add *
 - git commit -m "Explicacion"
-- git push origin master
+- git push
 
 Avisar sobre que archivos vais a trabajar ya que si dos personas trabajan localmente en  el mismo archivo y luego lo suben, habrá un conflicto. Si trabajan en archivos distintos, no pasa nada.
 
@@ -27,9 +27,8 @@ git init
 
 Al no clonar el repositorio, tenemos que agregarlo manualmente con un nombre. Por simplicidad vamos a llamarlo origin.
 
-- git remote add origin [link al repositorio]
+- git remote add origin https://github.com/Luigiverde4/ClicksForWater.git
 
-El link al repositorio: https://github.com/Luigiverde4/ClicksForWater.git
 
 Cogemos los archivos de github, la rama master (con la que vamos a trabajar)
 - git pull origin master
