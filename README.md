@@ -2,7 +2,7 @@
 **Creador:** Ricardo Román Martinez
 
 # INSTRUCCIONES
-
+### Si ya has completado el manual entero:
 Al comenzar el trabajo:
 - git pull
 
