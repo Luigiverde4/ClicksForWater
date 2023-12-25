@@ -67,9 +67,22 @@ function cerrarTienda() {
     }
 }
 
-// Función que hace la suma al valor actual del contador
-function sumar() {
+
+
+// Todo lo que sucede cuando clickeas el botón
+function buttonClick() {
+    var button = document.querySelector('.button-default');
+    button.classList.add('button-clicked');
+    button.setAttribute("style","background-color:red")
+
     trucosAmount = parseInt(trucosValue.textContent);
     currentCounter = parseInt(contador.textContent);
     contador.textContent = currentCounter + trucosAmount;
+
+    // Eliminar la clase 'button-clicked' después de la animación
+    setTimeout(function() {
+        button.classList.remove('button-clicked');
+        button.setAttribute("style","background-color:#2980b9")
+    }, 100);
+    
 }
