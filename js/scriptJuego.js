@@ -8,7 +8,7 @@ window.onload = function() {
 // Cuando se carga, asignamos los valores del contador y trucos  avariables
 // Pensar que podemos cargar datos de un JSON para guardar los valores de los puntos
 function comenzarJuego() {
-    contador = document.getElementById("contadorID");
+    contador = document.getElementById("puntos");
     trucosValue = document.getElementById("trucos");
 }
 
