@@ -5,11 +5,35 @@
     <title>Click click</title>
     <link rel="stylesheet" href = "../css/juego.css">
     <script src="../js/scriptJuego.js"></script>
+    <script src="../js/iras.js"></script>
 </head>
 <body>
     <header>
         <h1>Clicks for Africa</h1>
+    
+    <div>
+        <div style="display: flex;flex-direction: row; height: 50px;">
+            <div class = "bloquesNAV">
+                <a href = "contacto.html">Contacta con nosotros</a>
+            </div>
+            <div class = "bloquesNAV" >
+                <a href = "donativos.html">Donativos</a>
+            </div>
+            <div class = "bloquesNAV" >
+                <a href="juego.html">Dar clicks</a>
+            </div>
+            <div class = "bloquesNAV" >
+                <a href="blog.html">Blog </a>
+            </div>
+            <div class = "bloquesNAV">
+                <a href= "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html">Mas información sobre las ODS</a>
+            </div>
+        </div>
+
+    </div>
     </header>
+
+
     <aside>
         <button id="tienda" onclick="abrirTienda()">Abrir tienda</button>
     </aside>
@@ -27,11 +51,12 @@
         </div>
 
         <div id = "botonYcontador" class = "bloque">
-            <button class="button button-default" onclick="buttonClick()"> HAZME CLICK</button>
+            <div><button class="button button-default" onclick="buttonClick()"> HAZME CLICK</button></div>
+            
             <p>Puntos</p>
-            <div id="contadorID">
-                <span style="margin:5px" id="puntos">0</span>
-                <span style="font-size: 15px;color: gainsboro;">x</span><span style="font-size: 15px;color: gainsboro;" id="trucos">1</span>
+            <div id="contadorID" style="height: 40px;">
+                <span id="puntos">0</span>
+                <span style="font-size: 15px;color: gainsboro;">x<span style="font-size: 15px;color: gainsboro;" id="trucos">1</span></span>
             </div>
         </div>
 

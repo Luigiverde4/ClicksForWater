@@ -4,10 +4,16 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    margin-bottom:10px ;
+    
+    
 }
 
 label {
-    display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
@@ -35,3 +41,83 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+body{
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    
+}
+/* Estilo general para el cuerpo de la página */
+
+  
+  /* Estilo de los encabezados h1-h6 */
+  h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo específico para h1 */
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  /* Estilo específico para h2 */
+  h2 {
+    font-size: 2em;
+  }
+  
+  /* Estilo específico para h3 */
+  h3 {
+    font-size: 1.8em;
+  }
+  
+  /* Estilo específico para h4 */
+  h4 {
+    font-size: 1.5em;
+  }
+  
+  /* Estilo específico para h5 */
+  h5 {
+    font-size: 1.2em;
+  }
+  
+  /* Estilo específico para h6 */
+  h6 {
+    font-size: 1em;
+  }
+  
+  /* Estilo de los enlaces */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para la sección principal del contenido */
+  main {
+    padding: 20px;
+  }
+  
+.bloquesNAV {
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.bloquesNAV:hover{
+    background-color: rgb(124, 144, 222);
+    font-size: 20px;
+    text-decoration: underline;
+}
+  
