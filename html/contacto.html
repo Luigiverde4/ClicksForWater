@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <title>Como funciona</title>
     <link rel="stylesheet" href = "../css/contacto.css">
+    <link rel="stylesheet" href = "../css/form.css">
 </head>
 <body>
     <header>
     <div>
-        <div style="display: flex;flex-direction: row; height: 50px;">
+        <div style="display: flex;flex-direction: row; height: 50px;margin: 10px;">
             <div class = "bloquesNAV">
                 <a href = "contacto.html">Contacta con nosotros</a>
             </div>
@@ -45,7 +46,8 @@
     </div>
     
     <div>
-        <form>
+        <form style="top: 90%; left: 50%; width: 300px;">
+            <fieldset>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -70,7 +72,7 @@
 
                 <label for="comentarios">Comentarios:</label>
                 <textarea id="comentarios" name="comentarios" rows="4"></textarea>
-                
+            </fieldset>    
                 <button type="submit">Enviar</button>
         </form>
     </div>
