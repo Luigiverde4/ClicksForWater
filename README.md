@@ -9,7 +9,7 @@ Al comenzar el trabajo:
 Al acabar
 
 - git add *
-- git commit -m "Explicacion"
+- git commit -m "Titulo" -m "Eplicacion"
 - git push
 
 Avisar sobre que archivos vais a trabajar ya que si dos personas trabajan localmente en  el mismo archivo y luego lo suben, habrá un conflicto. Si trabajan en archivos distintos, no pasa nada.
