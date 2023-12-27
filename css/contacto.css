@@ -1,67 +1,53 @@
+/* Header */
+header{
+  text-align: center;
+  justify-content: center;
+}
 
-
+/* Estilo general para el cuerpo de la página */
 body{
     text-align: center;
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-    
 }
-/* Estilo general para el cuerpo de la página */
 
+/* CSS para los headers*/
+h1, h2, h3, h4, h5, h6 {
+  color: #333; /*Asi no es tan negro, es un gris */
+  margin-bottom: 10px;
+}
   
-  /* Estilo de los encabezados h1-h6 */
-  h1, h2, h3, h4, h5, h6 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Estilo específico para h1 */
-  h1 {
-    font-size: 2.5em;
-  }
-  
-  /* Estilo específico para h2 */
-  h2 {
-    font-size: 2em;
-  }
-  
-  /* Estilo específico para h3 */
-  h3 {
-    font-size: 1.8em;
-  }
-  
-  /* Estilo específico para h4 */
-  h4 {
-    font-size: 1.5em;
-  }
-  
-  /* Estilo específico para h5 */
-  h5 {
-    font-size: 1.2em;
-  }
-  
-  /* Estilo específico para h6 */
-  h6 {
-    font-size: 1em;
-  }
-  
-  /* Estilo de los enlaces */
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Estilo para la sección principal del contenido */
-  main {
-    padding: 20px;
-  }
-  
+h1 {
+  font-size: 45px; 
+}
+
+h2 {
+  font-size: 32px; 
+}
+
+/* Listas */
+#contenedor_listas {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li{
+  margin-bottom: 3px;
+  font-size: 18px
+}
+
+/* Estilo de los enlaces */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
 .bloquesNAV {
     border: 1px solid blue;
     border-radius: 10px;
@@ -77,8 +63,4 @@ body{
     background-color: rgb(124, 144, 222);
     font-size: 20px;
     text-decoration: underline;
-}
-header{
-  text-align: center;
-  justify-content: center;
 }

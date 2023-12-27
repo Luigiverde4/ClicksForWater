@@ -2,13 +2,62 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Como funciona</title>
+    <title>Contacta con nosotros</title>
     <link rel="stylesheet" href = "../css/contacto.css">
     <link rel="stylesheet" href = "../css/form.css">
 </head>
 <body>
     <header>
-    <div>
+        <p>Aqui tenemos que poner el header</p>
+    </header>
+    <main>
+        <div id = "contenedor_texto">
+            <h1>Contacta con nosotros</h1>
+            <p><i>Puedes contactar con nosotros rellenando el formulario</i></p>
+            <h2>¿Por qué contactar?</h2>
+        </div>
+        <div id = "contenedor_listas">
+            <ul>
+                <li>Si tienes alguna duda sobre nuestro proyecto</li>
+                <li>Si tienes cualquier problema con la web o su funcionamiento</li>
+                <li>Si quieres apoyarnos de alguna forma alternativa</li>
+                <li>Si tienes experencia y quieres formar parte del proyecto</li>
+                <li>Otros motivos</li>
+            </ul>
+        </div>
+        <div id = "contenedor_form">
+            <form style="top: 90%; left: 50%; width: 300px;">
+                <fieldset>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej. 1234567890" required>
+                    
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="18" max="99" required>
+
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <label for="suscripcion">Suscribirse:</label>
+                    <input type="checkbox" id="suscripcion" name="suscripcion" value="si">
+
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                </fieldset>    
+                    <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
         <div style="display: flex;flex-direction: row; height: 50px;margin: 10px;">
             <div class = "bloquesNAV">
                 <a href = "contacto.html">Contacta con nosotros</a>
@@ -28,57 +77,6 @@
         </div>
 
     </div>
-    </header>
-
-    <h1>Aquí puedes contactar con nosotros</h1>
-    <p>Siempre que quieras puedes contactar con nosotros rellenando el formulario
-    </p>
-    <h2>¿Por qué contactar?</h2>
-    <p>Te recomendamos contactar con nosotros:</p>
-    <div>
-        <ul>
-            <li>Si tienes alguna duda sobre nuestro proyecto</li>
-            <li>Si tienes cualquier problema con la web o su funcionamiento</li>
-            <li>Si quieres apoyarnos de alguna forma alternativa</li>
-            <li>Si tienes experencia y quieres formar parte del proyecto</li>
-
-        </ul>
-    </div>
-    
-    <div>
-        <form style="top: 90%; left: 50%; width: 300px;">
-            <fieldset>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej. 1234567890" required>
-                
-                <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad" min="18" max="99" required>
-
-                <label for="genero">Género:</label>
-                <select id="genero" name="genero" required>
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="otro">Otro</option>
-                </select>
-
-                <label for="suscripcion">Suscribirse:</label>
-                <input type="checkbox" id="suscripcion" name="suscripcion" value="si"> Sí, deseo suscribirme.
-
-                <label for="comentarios">Comentarios:</label>
-                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
-            </fieldset>    
-                <button type="submit">Enviar</button>
-        </form>
-    </div>
-    
-
-
-
+    </footer>
 </body>
 </html>
