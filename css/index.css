@@ -114,18 +114,3 @@ a {
     text-align: center;
     justify-content: center;
 }
-
-/*Contenido del footer*/
-footer{
-    background-color: rgba(222, 188, 124, 0.862);
-
-    display: flex;
-    flex-direction: row;
-
-    position: fixed;
-
-    bottom:0%;
-    width:100%;
-    z-index: 10;
-
-}

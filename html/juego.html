@@ -4,40 +4,22 @@
     <meta charset="UTF-8" />
     <title>Click click</title>
     <link rel="stylesheet" href = "../css/juego.css">
+    <link rel="stylesheet" href = "../css/header_y_footer.css">
+    <link rel="shortcut icon" type="image/PNG" href = "../img/logo.png">
     <script src="../js/scriptJuego.js"></script>
-    <script src="../js/iras.js"></script>
+
 </head>
 <body>
     <header>
-    
-    <div>
-        <div style="display: flex;flex-direction: row; height: 50px;">
-            <div class = "bloquesNAV">
-                <a href = "contacto.html">Contacta con nosotros</a>
-            </div>
-            <div class = "bloquesNAV" >
-                <a href = "donativos.html">Donativos</a>
-            </div>
-            <div class = "bloquesNAV" >
-                <a href="juego.html">Dar clicks</a>
-            </div>
-            <div class = "bloquesNAV" >
-                <a href="blog.html">Blog </a>
-            </div>
-            <div class = "bloquesNAV">
-                <a href= "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html">Mas información sobre las ODS</a>
-            </div>
-        </div>
-
-    </div>
+    <p> Aqui va el header</p>
     </header>
 
 
     <aside>
         <button id="tienda" onclick="abrirTienda()">Abrir tienda</button>
     </aside>
-    <main>
 
+    <main>
         <div id = "botonYcontador" class = "bloque">
             <div><button class="button button-default" onclick="buttonClick()"> HAZME CLICK</button></div>
             
@@ -48,13 +30,27 @@
                 <span id="puntos">0</span>
                 <span style="font-size: 15px;color: rgb(0, 0, 0);">x<span style="font-size: 15px;color: rgb(0, 0, 0);" id="trucos">1</span></span>
             </div>
-           
-        </div>
-        
+        </div>  
     </main>
-
     <footer>
-        <p> Creado por el grupo mas tonto de Tecweb</p>
+        <script src = "../js/iras.js"></script>
+            <nav>
+                    <div class = "bloquesNAV" onclick = ira(0)>
+                        <a href = "contacto.html">Contacta con nosotros</a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = "ira(1)">
+                        <a href = "donativos.html">Donativos</a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = "ira(2)">
+                        <a href="../landing.html">Página de inicio</a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = "ira(3)">
+                        <a href="blog.html">Blog </a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = ira(4)>
+                        <a href= "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html">Mas información sobre las ODS</a>
+                    </div>
+            </nav>
     </footer>
 </body>
 </html>

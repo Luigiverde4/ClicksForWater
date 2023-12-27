@@ -5,6 +5,7 @@
     <title>Contacta con nosotros</title>
     <link rel="stylesheet" href = "../css/contacto.css">
     <link rel="stylesheet" href = "../css/form.css">
+    <link rel="stylesheet" href = "../css/header_y_footer.css">
 </head>
 <body>
     <header>
@@ -57,26 +58,26 @@
             </form>
         </div>
     </main>
-    <footer>
-        <div style="display: flex;flex-direction: row; height: 50px;margin: 10px;">
-            <div class = "bloquesNAV">
-                <a href = "contacto.html">Contacta con nosotros</a>
-            </div>
-            <div class = "bloquesNAV" >
-                <a href = "donativos.html">Donativos</a>
-            </div>
-            <div class = "bloquesNAV" >
-                <a href="juego.html">Dar clicks</a>
-            </div>
-            <div class = "bloquesNAV" >
-                <a href="blog.html">Blog </a>
-            </div>
-            <div class = "bloquesNAV">
-                <a href= "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html">Mas información sobre las ODS</a>
-            </div>
-        </div>
 
-    </div>
+    <footer>
+        <script src = "../js/iras.js"></script>
+            <nav>
+                    <div class = "bloquesNAV" onclick = ira(5)>
+                        <a href = "../landing.html">Página principal</a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = "ira(1)">
+                        <a href = "donativos.html">Donativos</a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = "ira(2)">
+                        <a href="juego.html">Dar clicks</a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = "ira(3)">
+                        <a href="blog.html">Blog </a>
+                    </div>
+                    <div class = "bloquesNAV" onclick = ira(4)>
+                        <a href= "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html">Mas información sobre las ODS</a>
+                    </div>
+            </nav>
     </footer>
 </body>
 </html>

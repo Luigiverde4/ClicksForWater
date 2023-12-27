@@ -46,21 +46,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-
-.bloquesNAV {
-    border: 1px solid blue;
-    border-radius: 10px;
-    padding: 10px;
-    flex: 1;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-.bloquesNAV:hover{
-    background-color: rgb(124, 144, 222);
-    font-size: 20px;
-    text-decoration: underline;
-}

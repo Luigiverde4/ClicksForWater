@@ -80,7 +80,7 @@ main{
 
 
 
-/* Animación al hacer clic */
+/* Animación al hacer clic 
 @keyframes clickAnimation {
     0% {
         transform: scale(1);
@@ -105,13 +105,7 @@ aside {
     justify-content: center;
 }
 
-a {
-    text-decoration-line: none;
-    color:inherit
-}
-a:hover {
-    text-decoration: underline;
-}
+
 aside > a{
     text-decoration-line: none;
     padding: 10px;
@@ -144,21 +138,4 @@ aside > a{
     font-family: "Helvetica","sans-serif";
     text-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
     
-}
-
-.bloquesNAV {
-    border: 1px solid blue;
-    border-radius: 10px;
-    padding: 10px;
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-.bloquesNAV:hover{
-    background-color: rgb(124, 144, 222);
-    font-size: 20px;
-    text-decoration: underline;
 }

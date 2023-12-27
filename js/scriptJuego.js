@@ -1,6 +1,7 @@
 let contador;
 let trucosValue;
 let tiendaOpen = false;
+
 // Cada vez que se cargue la web, se carga el juego 
 window.onload = function() {
     comenzarJuego();
@@ -48,7 +49,9 @@ function abrirTienda() {
     // Metemos los elementos a tiendaDiv
     tiendaDiv.appendChild(cerrarButton);
     tiendaDiv.appendChild(tiendaTable);
-    document.body.appendChild(tiendaDiv);
+
+    let ElementoAside = document.querySelector("aside")
+    ElementoAside.appendChild(tiendaDiv);
 
     tiendaOpen = true;
 }
@@ -62,7 +65,8 @@ function cerrarTienda() {
     tiendaDiv = document.getElementById("tiendaDiv");
     // Si tiendaDiv existe, lo eliminamos
     if (tiendaDiv) {
-        document.body.removeChild(tiendaDiv);
+        let ElementoAside = document.querySelector("aside")
+        ElementoAside.removeChild(tiendaDiv);
         tiendaOpen = false;
     }
 }
