@@ -15,6 +15,8 @@ function comenzarJuego() {
 
 // Funcion para abrir la tienda
 function abrirTienda() {
+    arrrayTrucos = [];
+    arrayCuesta = [];
     if (tiendaOpen) {
         // Si ya está abierta, paramos
         return;
@@ -30,9 +32,11 @@ function abrirTienda() {
 
     for (let i = 1; i <= 4; i++) {
         button = document.createElement("button");
-        button.textContent = `Incrementar Trucos por ${i}`;
+        button.textContent = `Incrementar Trucos por ${(10**i)} cuesta ${(10**(i+1))}`;
+        arrrayTrucos.push(10**i)
+        arrayCuesta.push(10**(i+1))
         button.onclick = function() {
-            incrementarTrucos(i);
+            incrementarTrucos(i,arrrayTrucos,arrayCuesta);
         };
 
         cell = buttonRow.insertCell();
@@ -56,8 +60,11 @@ function abrirTienda() {
     tiendaOpen = true;
 }
 
-function incrementarTrucos(cantidad) {
-    trucosValue.textContent = parseInt(trucosValue.textContent) + cantidad;
+function incrementarTrucos(numero,arrrayTrucos,arrayCuesta) {
+    if (contador.textContent>=arrayCuesta[numero-1]) {
+        contador.textContent=contador.textContent - arrayCuesta[numero-1];
+        trucosValue.textContent = parseInt(trucosValue.textContent) + arrrayTrucos[numero-1];
+    }
 }
 
 // Para cerrar la tienda
@@ -82,7 +89,7 @@ function buttonClick() {
     // Se anima el botón
     button.classList.add('button-clicked');
     // Cambia el color del botón
-    button.setAttribute("style","background-color:red")
+    button.setAttribute("style","background-color:#2965b9")
     // Se añaden los puntos correspondientes
     trucosAmount = parseInt(trucosValue.textContent);
     currentCounter = parseInt(contador.textContent);
