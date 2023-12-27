@@ -1,0 +1,24 @@
+
+
+#entrada {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(43, 248, 2);
+    padding: 10px;
+}
+
+#titular {
+    background-color:blue;
+    width:100%;
+}
+
+#info {
+    background-color: blueviolet;
+}
+
+#info img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
