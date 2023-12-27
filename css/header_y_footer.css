@@ -21,7 +21,7 @@ nav{
       background-color: rgb(163, 174, 219);
       font-size: 20px;
       text-decoration: underline;
-      text-decoration-color: #007bff;
+      text-decoration-color: blue;
       cursor:pointer
   }
 a {
