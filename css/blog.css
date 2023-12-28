@@ -1,19 +1,44 @@
-
+body {
+    background-color: rgb(158, 225, 249)
+}
 
 #entrada {
     display: flex;
     flex-direction: column;
-    background-color: rgb(43, 248, 2);
+    background-color: rgb(238, 220, 162);
     padding: 10px;
 }
 
 #titular {
-    background-color:blue;
-    width:100%;
+    display: inline-block;
+    background-color:rgb(255, 186, 82);
+    width:74.5%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-style: groove;
+    border-radius: 2px;
+    border-color: black;
+}
+
+#fecha {
+    display: inline-block;
+    width:25%;
+    text-align: center;
+    padding: 5px;
+    border-style: groove;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border-color: black;
 }
 
 #info {
-    background-color: blueviolet;
+    background-color:antiquewhite;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 2px;
+    border-color: black;
+    border-style: groove;
+
 }
 
 #info img {
