@@ -28,26 +28,36 @@ body{
     margin: 10px;
   }
 
-  /* Cesta */
-  #cesta {
-    width: 200px;
-    height: 200px;
-    background-color: #eee;
-    border: 2px solid #333;
-    margin: 20px;
-    text-align: center;
-    padding: 5px;
+/* Cesta */
+#cesta {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  border: 2px solid #333;
+  margin: 20px;
+  text-align: center;
+  padding: 5px;
+}
+#listas {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
 
-    display: flex;
-    flex-direction: column;
-  }
+#listas div {
+  height: 20px;
+  margin: 2px 0px 2px 0px
+}
 
-  #listas div {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #checkout {
-    margin-top: auto;
-  }
-  
+/* Para que los divs y los parrafos de los articulos que contienen */
+#listas div > p, #listas div > div {
+  width:60%;
+  height: 20px;
+}
+#listas > div  {
+  display: flex;
+  flex-direction: row;
+}
+#checkout {
+  margin-top: auto;
+}
