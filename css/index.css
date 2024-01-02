@@ -79,38 +79,8 @@ aside * {
     padding-left: 7px;
     
 }
-nav{
-    display: flex;
-    flex-direction: column;
-    height:80%
-
-}
-.bloquesNAV {
-    border: 1px solid blue;
-    border-radius: 10px;
-    padding: 10px;
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-.bloquesNAV:hover{
-    background-color: rgb(124, 144, 222);
-    font-size: 20px;
-    text-decoration: underline;
-}
-
 summary{
     text-decoration: underline;
     font-weight: bold;
     padding-bottom: 5px;
-}
-
-a {
-    text-decoration-line: none;
-    color: black;
-    text-align: center;
-    justify-content: center;
 }
