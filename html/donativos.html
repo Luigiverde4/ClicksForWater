@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <title>Donativos</title>
+    <link rel="stylesheet" href = "../css/donativo.css">
     <link rel="stylesheet" href = "../css/header_y_footer.css">
     <link rel="shortcut icon" type="image/PNG" href = "../img/logo.png">
+    <script src="../js/donativo.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +21,26 @@
             <p> Ir a donar</p>
         </div>
     </header>
-
+    <div class="opciones">
+        <div class="arrastrable" draggable="true" ondragstart="drag(event)">
+          <img src="../img/israel.jpg" alt="Item 1" class="itemImagen">
+          <p>Item 1</p>
+          <p>Cuesta 10 Euros</p>
+        </div>
+        <div class="arrastrable" draggable="true" ondragstart="drag(event)">
+          <img src="../img/logo.png" alt="Item 2" class="itemImagen">
+          <p>Item 2</p>
+          <p>Cuesta 100 Euros</p>
+        </div>
+        <div class="arrastrable" draggable="true" ondragstart="drag(event)">
+          <img src="../img/logo2.jpeg" alt="Item 3" class="itemImagen">
+          <p>Item 3</p>
+          <p>Cuesta 1000 Euros</p>
+        </div>
+    </div>
+   <div id="cesta" ondrop="drop(event)" ondragover="allowDrop(event)">Cesta<div id="contador">Total: 0</div>
+   </div>
+  
     </main>
     <footer>
         <script src = "../js/iras.js"></script>

@@ -1,0 +1,30 @@
+.opciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cesta {
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    border: 2px solid #333;
+    margin: 20px;
+    text-align: center;
+    padding: 5px;
+  }
+  
+.arrastrable {
+    width: 30%;
+    height: 10%;
+    background-color: rgb(162, 0, 255);
+    color: #fff;
+    text-align: center;
+    cursor: move;
+    margin: 10px;
+}
+
+.itemImagen {
+    max-width: 240px;
+    max-height: 80px; 
+    margin: 10px;
+  }
