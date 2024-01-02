@@ -6,12 +6,16 @@ body{
     flex:1;
     justify-content: center;
     border:solid 1px black;
+    
 }
 
 main{
     display:flex;
     flex-direction: row;
     margin:10px;
+    
+    height: 400px;
+    
 }
 
 
@@ -30,6 +34,7 @@ main{
     color: #fff;
     background-color: #3498db;
     justify-content: center;
+    margin-bottom: 10px;
 
     font-size: 16px;
     font-weight: bold;
@@ -61,6 +66,7 @@ main{
 #puntos{
     font-family: "Helvetica","sans-serif";
     text-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+    height: 30px;
     
 }
 #trucos, #multiplicador {
