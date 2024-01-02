@@ -2,14 +2,14 @@ body {
     background-color: rgb(158, 225, 249)
 }
 
-#entrada {
+.entrada {
     display: flex;
     flex-direction: column;
     background-color: rgb(238, 220, 162);
     padding: 10px;
 }
 
-#titular {
+.titular {
     display: inline-block;
     background-color:rgb(255, 186, 82);
     width:74.5%;
@@ -20,7 +20,7 @@ body {
     border-color: black;
 }
 
-#fecha {
+.fecha {
     display: inline-block;
     width:25%;
     text-align: center;
@@ -31,7 +31,7 @@ body {
     border-color: black;
 }
 
-#info {
+div.info {
     background-color:antiquewhite;
     border-radius: 2px;
     padding: 5px;
@@ -41,7 +41,7 @@ body {
 
 }
 
-#info img {
+div.info img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
