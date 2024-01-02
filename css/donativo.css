@@ -1,9 +1,35 @@
+body{
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+}
+/* Arrastrables */
 .opciones {
     display: flex;
     justify-content: space-between;
 }
 
-#cesta {
+.arrastrable {
+    width: 30%;
+    height: 10%;
+    background-color: rgb(172, 106, 210);
+    border: 3px #333 solid;
+    color: #fff;
+    text-align: center;
+    cursor: move;
+    margin: 10px;
+}
+.arrastrable p:first-of-type{
+  font-style: italic;
+}
+.itemImagen {
+    max-width: 240px;
+    max-height: 80px; 
+    margin: 10px;
+  }
+
+  /* Cesta */
+  #cesta {
     width: 200px;
     height: 200px;
     background-color: #eee;
@@ -11,20 +37,17 @@
     margin: 20px;
     text-align: center;
     padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  #listas div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #checkout {
+    margin-top: auto;
   }
   
-.arrastrable {
-    width: 30%;
-    height: 10%;
-    background-color: rgb(162, 0, 255);
-    color: #fff;
-    text-align: center;
-    cursor: move;
-    margin: 10px;
-}
-
-.itemImagen {
-    max-width: 240px;
-    max-height: 80px; 
-    margin: 10px;
-  }
