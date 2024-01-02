@@ -20,6 +20,14 @@ header h1 {
     color:#333;
     margin-bottom: 10px;
 }
+
+.cabeceras{
+    flex:1;
+}
+.cabeceras:first-of-type{
+    display: flex;
+    align-items: flex-start;
+}
 /* Estilo del footer */
 nav{
     display: flex;

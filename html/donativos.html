@@ -10,37 +10,39 @@
 </head>
 <body>
     <header>
-        <div style="flex: 1; display: flex; align-items: flex-start;">
+        <div class = "cabeceras">
             <a href = "../landing.html"><img src = "../img/logo.png" height = "120px" ></a>
         </div>
-        <div style = "flex:1">
+        <div class = "cabeceras">
             <h1>Donativos</h1>
             <p><i>Dona directamente una cantidad de dinero</i></p>
         </div>
-        <div style = "flex:1">
+        <div class = "cabeceras">
             <p> Ir a donar</p>
         </div>
     </header>
-    <div class="opciones">
-        <div class="arrastrable" draggable="true" ondragstart="drag(event)">
-          <img src="../img/israel.jpg" alt="Item 1" class="itemImagen">
-          <p>Item 1</p>
-          <p>Cuesta 10 Euros</p>
+    <main>
+        <div class="opciones">
+            <div class="arrastrable" draggable="true" ondragstart="drag(event)">
+                <img src="../img/israel.jpg" alt="Item 1" class="itemImagen">
+                <p>Item 1</p>
+                <p>Cuesta 10 Euros</p>
+            </div>
+            <div class="arrastrable" draggable="true" ondragstart="drag(event)">
+                <img src="../img/logo.png" alt="Item 2" class="itemImagen">
+                <p>Item 2</p>
+                <p>Cuesta 100 Euros</p>
+            </div>
+            <div class="arrastrable" draggable="true" ondragstart="drag(event)">
+                <img src="../img/logo2.jpeg" alt="Item 3" class="itemImagen">
+                <p>Item 3</p>
+                <p>Cuesta 1000 Euros</p>
+            </div>
         </div>
-        <div class="arrastrable" draggable="true" ondragstart="drag(event)">
-          <img src="../img/logo.png" alt="Item 2" class="itemImagen">
-          <p>Item 2</p>
-          <p>Cuesta 100 Euros</p>
-        </div>
-        <div class="arrastrable" draggable="true" ondragstart="drag(event)">
-          <img src="../img/logo2.jpeg" alt="Item 3" class="itemImagen">
-          <p>Item 3</p>
-          <p>Cuesta 1000 Euros</p>
-        </div>
+    <div id="cesta" ondrop="drop(event)" ondragover="allowDrop(event)">Cesta
+        <div id="contador">Total: 0</div>
     </div>
-   <div id="cesta" ondrop="drop(event)" ondragover="allowDrop(event)">Cesta<div id="contador">Total: 0</div>
-   </div>
-  
+
     </main>
     <footer>
         <script src = "../js/iras.js"></script>
