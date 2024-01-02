@@ -28,6 +28,9 @@ header h1 {
     display: flex;
     align-items: flex-start;
 }
+.cabeceras img {
+    margin-top: 5px;
+}
 /* Estilo del footer */
 nav{
     display: flex;
