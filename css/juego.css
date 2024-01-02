@@ -1,31 +1,19 @@
 body{
     background-color: rgb(158, 225, 249);
 }
-header{
-    justify-content: center;
-    text-align: center;
-}
+
 .bloque{
     flex:1;
     justify-content: center;
     border:solid 1px black;
 }
 
-
 main{
-
     display:flex;
     flex-direction: row;
     margin:10px;
 }
 
-
-#testeo{
-    background-color: cornflowerblue;
-    position:relative;
-    top: 25%;
-    width: 50%;
-}
 
 #botonYcontador{
     display: flex;
@@ -35,31 +23,28 @@ main{
     text-align: center;
 }
 
-.button{
+/* Boton */
+.button-default {
+    width: 600px;
+    height: 300px;
+    color: #fff;
+    background-color: #3498db;
+    justify-content: center;
+
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
+
     cursor: pointer;
+
     border: none;
     border-radius: 5px;
+
     transition: background-color 0.1s ease;
-    width: 600px;
-    height: 600px;
-    justify-content: center;
+
+
     
-}
-
-
-/* Estilo predeterminado */
-.button-default {
-    color: #fff;
-    background-color: #3498db;
-}
-
-/* Estilo al pasar el ratón sobre el botón */
-.button-default:hover {
-    background-color: #2980b9;
 }
 
 /* Estilo al hacer clic en el botón */
@@ -69,13 +54,21 @@ main{
 
 /* Estilo de la animación al hacer clic */
 .button-clicked {
-    animation: clickAnimation 0.1s;
+    animation: clickAnimation 0.5s;
     
 }
+/* Puntos y bonus */
+#puntos{
+    font-family: "Helvetica","sans-serif";
+    text-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+    
+}
+#trucos, #multiplicador {
+    font-size: 15px;
+    color:black;
 
+}
 
-
-/* Animación al hacer clic 
 @keyframes clickAnimation {
     0% {
         transform: scale(1);
@@ -83,54 +76,10 @@ main{
     50% {
         transform: scale(0.8);
     }
+    80%{
+        transform: scale(0.6)
+    }
     100% {
         transform: scale(1);
     }
-}
-
-aside {
-    top: 25%;
-    right: 10px;
-    margin-right: 10px;
-    position: fixed;
-    border: 1px solid black;
-    background-color: rgb(245, 245, 220);
-    z-index:10; 
-    text-align: center;
-    justify-content: center;
-}
-
-
-aside > a{
-    text-decoration-line: none;
-    padding: 10px;
-}
-
-#tienda:visited{
-    color: inherit;
-}
-#tienda:hover{
-    background-color: rgb(218, 218, 108);
-    color: rgb(115, 83, 195);
-}
-#tienda > a{
-    text-decoration-line: none;
-}
-
-#contadorID{
-  font-family: 'Arial', sans-serif;
-  font-size: 30px;
-  color: #fff;
-  padding: 10px 20px;
-  
-  
-  display: inline-block;
-
-
-}
-
-#puntos{
-    font-family: "Helvetica","sans-serif";
-    text-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
-    
 }
