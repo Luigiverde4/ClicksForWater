@@ -1,11 +1,26 @@
-/* Estilo del footer */
-footer{
+footer,header{
     background-color: rgb(150, 239, 243);
     padding: 3px;
     margin-top: 10px;
     border: 3px solid black;
     border-radius: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
+/* Estilo del header */
+header{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+header h1 {
+    font-size: 45px;
+    color:#333;
+    margin-bottom: 10px;
+}
+/* Estilo del footer */
+
 nav{
     display: flex;
     flex-direction: row;
