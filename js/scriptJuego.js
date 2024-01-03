@@ -21,6 +21,13 @@ function abrirTienda() {
         // Si ya está abierta, paramos
         return;
     }
+
+    // Cambiamos el botón para que cierre la tienda
+    let boton_tienda = document.getElementById("tienda");
+    boton_tienda.style.backgroundColor = "red";
+    boton_tienda.textContent = "Cerrar tienda";
+    boton_tienda.onclick = cerrarTienda;
+
     // Creamos el div y le ponemos un ID
     tiendaDiv = document.createElement("div");
     tiendaDiv.id = "tiendaDiv";
@@ -42,16 +49,7 @@ function abrirTienda() {
         cell = buttonRow.insertCell();
         cell.appendChild(button);
     }
-
-
-
-    // Creamos el boton para cerrar la tienda
-    cerrarButton = document.createElement("button");
-    cerrarButton.textContent = "Cerrar Tienda";
-    cerrarButton.onclick = cerrarTienda;
-
     // Metemos los elementos a tiendaDiv
-    tiendaDiv.appendChild(cerrarButton);
     tiendaDiv.appendChild(tiendaTable);
 
     let ElementoAside = document.querySelector("aside")
@@ -75,6 +73,12 @@ function cerrarTienda() {
         let ElementoAside = document.querySelector("aside")
         ElementoAside.removeChild(tiendaDiv);
         tiendaOpen = false;
+
+        let boton_tienda = document.getElementById("tienda")
+        boton_tienda.style.backgroundColor = "rgb(64, 206, 64)"
+        boton_tienda.textContent = "Abrir tienda"
+        boton_tienda.onclick = abrirTienda
+    
     }
 }
 

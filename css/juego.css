@@ -1,3 +1,4 @@
+/* Body y contenedores */
 body{
     background-color: rgb(158, 225, 249);
 }
@@ -7,7 +8,15 @@ body{
     justify-content: center;
     border:solid 1px black;
     
+    display: flex;
+    flex-direction: column;
 }
+.botones {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 main{
     display:flex;
@@ -18,7 +27,6 @@ main{
     
 }
 
-
 #botonYcontador{
     display: flex;
     flex-direction: column;
@@ -27,7 +35,10 @@ main{
     text-align: center;
 }
 
-/* Boton */
+button {
+    cursor: pointer;
+}
+/* Boton principal*/
 .button-default {
     width: 600px;
     height: 300px;
@@ -35,13 +46,6 @@ main{
     background-color: #3498db;
     justify-content: center;
     margin-bottom: 10px;
-
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-
-    cursor: pointer;
 
     border: none;
     border-radius: 5px;
@@ -59,8 +63,7 @@ main{
 
 /* Estilo de la animación al hacer clic */
 .button-clicked {
-    animation: clickAnimation 0.8s;
-    
+    animation: clickAnimation 0.8s; 
 }
 /* Puntos y bonus */
 #puntos{
@@ -88,4 +91,30 @@ main{
     100% {
         transform: scale(1);
     }
+}
+
+/* Otros botones */
+
+#tienda {
+    background-color: rgb(64, 206, 64);
+
+
+}
+
+#donativo {
+    background-color: rgb(227, 224, 44);
+}
+#tienda, #donativo{
+    height : 60%;
+    width: 67%;
+
+    border: 2px #333 solid;
+    border-radius: 10px;
+}
+.button-default, #tienda, #donativo {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
 }
