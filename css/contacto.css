@@ -10,7 +10,9 @@ body{
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
 }
-
+body{
+  background-color: rgb(158, 225, 249);
+}
 /* CSS para los headers*/
 h1, h2, h3, h4, h5, h6 {
   color: #333; /*Asi no es tan negro, es un gris */
