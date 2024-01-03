@@ -6,7 +6,7 @@ body{
 .bloque{
     flex:1;
     justify-content: center;
-    border:solid 1px black;
+    text-align: center;
     
     display: flex;
     flex-direction: column;
@@ -27,6 +27,7 @@ main{
     
 }
 
+/* Botones */
 #botonYcontador{
     display: flex;
     flex-direction: column;
@@ -109,10 +110,53 @@ button {
     border: 2px #333 solid;
     border-radius: 10px;
 }
-.button-default, #tienda, #donativo {
+.button-default, #tienda, #donativo, #tiendaDiv button {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
 
+}
+
+/* Area tienda */
+h2 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+#tiendaDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 130, 160);
+    border: 10px ridge black;
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tiendaDiv button {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#tiendaDiv p {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#botonesDiv{
+    display: flex;
+    flex-direction: row;
+
+    width:80%;
+    height: 150px;
+
+    flex-grow:1;
 }

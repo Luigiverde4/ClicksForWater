@@ -17,7 +17,7 @@ function cambiarBoton(abierta){
     let boton_tienda = document.getElementById("tienda");
     switch(abierta){
         case("abierta"):
-            boton_tienda.style.backgroundColor = "red";
+            boton_tienda.style.backgroundColor = "rgb(242, 53, 53)";
             boton_tienda.textContent = "Cerrar tienda";
             boton_tienda.onclick = cerrarTienda;
             break;
@@ -30,6 +30,61 @@ function cambiarBoton(abierta){
     }
 }
 
+// Funcion para generar el bloque de la tienda
+function generarTienda(){
+    
+    // Creamos el div y le ponemos un ID
+    tiendaDiv = document.createElement("div");
+    tiendaDiv.id = "tiendaDiv";
+
+    // Creamos un div para los botones y costes
+    botonesDiv = document.createElement("div");
+    botonesDiv.id = "botonesDiv"
+
+    // Le metemos el titulo
+    tituloTienda = document.createElement("h2")
+    tituloTienda.textContent = "Tienda"
+    tiendaDiv.append(tituloTienda)
+    
+    // Bucle para ir generando los botones
+    for (let i = 1; i <= 4; i++) {
+        // Creamos el boton y el parrafo de su coste
+        button = document.createElement("button");
+        coste = document.createElement("p");
+
+        // Creamos un bloque
+        bloque = document.createElement("div")
+        bloque.classList.add("bloque")
+
+        // Les asignamos valores
+        button.textContent = `x ${(10**i)}`;
+        coste.textContent = `Coste: ${(10**(i+1))} puntos`;
+        
+        // Incrementamos el multiplicador de los trucos
+        arrrayTrucos.push(10**i);
+        arrayCuesta.push(10**(i+1));
+
+        button.onclick = function() {
+            incrementarTrucos(i, arrrayTrucos, arrayCuesta);
+        };
+
+        //Metemos el boton y coste en el bloque
+        bloque.appendChild(button);
+        bloque.appendChild(coste);
+
+
+        // Agrega cada botón al div de la tienda
+        botonesDiv.appendChild(bloque);
+        tiendaDiv.appendChild(botonesDiv)
+    }
+
+    // Agrega el div de la tienda al elemento 'aside' del documento
+    let ElementoAside = document.querySelector("aside");
+    ElementoAside.appendChild(tiendaDiv);
+
+
+}
+
 // Funcion para abrir la tienda
 function abrirTienda() {
     arrrayTrucos = [];
@@ -39,36 +94,9 @@ function abrirTienda() {
         return;
     }
 
+    // Cambiamos el boton para que pueda cerrar la tienda
     cambiarBoton("abierta");
-
-
-    // Creamos el div y le ponemos un ID
-    tiendaDiv = document.createElement("div");
-    tiendaDiv.id = "tiendaDiv";
-
-    // Tabla?? Los trucos hay que mirarlos a ver que metemos en la version final
-    tiendaTable = document.createElement("table");
-
-    buttonRow = tiendaTable.insertRow();
-
-    for (let i = 1; i <= 4; i++) {
-        button = document.createElement("button");
-        button.textContent = `Incrementar Trucos por ${(10**i)} cuesta ${(10**(i+1))}`;
-        arrrayTrucos.push(10**i)
-        arrayCuesta.push(10**(i+1))
-        button.onclick = function() {
-            incrementarTrucos(i,arrrayTrucos,arrayCuesta);
-        };
-
-        cell = buttonRow.insertCell();
-        cell.appendChild(button);
-    }
-    // Metemos los elementos a tiendaDiv
-    tiendaDiv.appendChild(tiendaTable);
-
-    let ElementoAside = document.querySelector("aside")
-    ElementoAside.appendChild(tiendaDiv);
-
+    generarTienda()
     tiendaOpen = true;
 }
 
@@ -87,6 +115,7 @@ function cerrarTienda() {
         let ElementoAside = document.querySelector("aside")
         ElementoAside.removeChild(tiendaDiv);
         tiendaOpen = false;
+        // Cambiamos el boton para que pueda abrir la tienda
         cambiarBoton("cerrada")
     }
 }
