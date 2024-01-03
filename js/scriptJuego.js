@@ -13,6 +13,23 @@ function comenzarJuego() {
     trucosValue = document.getElementById("trucos");
 }
 
+function cambiarBoton(abierta){
+    let boton_tienda = document.getElementById("tienda");
+    switch(abierta){
+        case("abierta"):
+            boton_tienda.style.backgroundColor = "red";
+            boton_tienda.textContent = "Cerrar tienda";
+            boton_tienda.onclick = cerrarTienda;
+            break;
+        
+        case ("cerrada"):
+            boton_tienda.style.backgroundColor = "rgb(64, 206, 64)"
+            boton_tienda.textContent = "Abrir tienda"
+            boton_tienda.onclick = abrirTienda
+            break;
+    }
+}
+
 // Funcion para abrir la tienda
 function abrirTienda() {
     arrrayTrucos = [];
@@ -22,11 +39,8 @@ function abrirTienda() {
         return;
     }
 
-    // Cambiamos el botón para que cierre la tienda
-    let boton_tienda = document.getElementById("tienda");
-    boton_tienda.style.backgroundColor = "red";
-    boton_tienda.textContent = "Cerrar tienda";
-    boton_tienda.onclick = cerrarTienda;
+    cambiarBoton("abierta");
+
 
     // Creamos el div y le ponemos un ID
     tiendaDiv = document.createElement("div");
@@ -73,12 +87,7 @@ function cerrarTienda() {
         let ElementoAside = document.querySelector("aside")
         ElementoAside.removeChild(tiendaDiv);
         tiendaOpen = false;
-
-        let boton_tienda = document.getElementById("tienda")
-        boton_tienda.style.backgroundColor = "rgb(64, 206, 64)"
-        boton_tienda.textContent = "Abrir tienda"
-        boton_tienda.onclick = abrirTienda
-    
+        cambiarBoton("cerrada")
     }
 }
 
