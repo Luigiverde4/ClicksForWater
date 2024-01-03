@@ -24,9 +24,9 @@ header h1 {
 .cabeceras{
     flex:1;
 }
-.cabeceras:first-of-type{
-    display: flex;
-    align-items: flex-start;
+.cabeceras:first-of-type img{
+    position: absolute;
+    left: 5px;
 }
 .cabeceras img {
     margin-top: 5px;

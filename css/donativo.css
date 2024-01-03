@@ -37,6 +37,10 @@ body{
   margin: 20px;
   text-align: center;
   padding: 5px;
+
+  position: relative;
+  top:50%;
+  left:40%;
 }
 #listas {
   display: flex;
@@ -60,4 +64,32 @@ body{
 }
 #checkout {
   margin-top: auto;
+}
+
+/* Informativo */
+
+#infoDonativos {
+  width: 550px;
+
+  position: absolute;
+  right: 10px;
+  border: 2px #333 solid;
+  border-radius: 10px;
+
+  background-color: #be8e40;
+
+
+}
+#infoDonativos p {
+  margin: 0px;
+}
+/* Listas */
+#contenedor_listas {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li{
+  margin-bottom: 3px;
 }
