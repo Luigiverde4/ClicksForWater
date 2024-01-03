@@ -16,7 +16,7 @@ body{
     border: 3px #333 solid;
     color: #fff;
     text-align: center;
-    cursor: move;
+    cursor: grab;
     margin: 10px;
 }
 .arrastrable p:first-of-type{
