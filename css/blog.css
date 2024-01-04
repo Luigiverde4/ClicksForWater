@@ -27,7 +27,7 @@ main{
 
 .fecha {
     display: inline-block;
-    width:60%;
+    width:25%;
     text-align: center;
     padding: 5px;
     border-style: groove;
