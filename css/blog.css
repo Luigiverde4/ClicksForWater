@@ -2,10 +2,15 @@ body {
     background-color: rgb(158, 225, 249)
 }
 
+main{
+    background-color: rgb(238, 220, 162);
+
+}
+
 .entrada {
     display: flex;
     flex-direction: column;
-    background-color: rgb(238, 220, 162);
+
     padding: 10px;
 }
 
