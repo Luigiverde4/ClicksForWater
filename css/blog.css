@@ -47,3 +47,13 @@ div.info img {
     max-width: 100%;
     height: auto;
 }
+
+/* Grid multimedia */
+h2 {
+    text-align: center;
+}
+.cuerpo {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    gap: 5px;
+}
