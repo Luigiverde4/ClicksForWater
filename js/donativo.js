@@ -6,11 +6,21 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 
-// Al arrastrar settea basado en el primer tag p que lee
+// Al arrastrar settea basado en el primer tag summary que lee
 function drag(ev) {
-  ev.dataTransfer.setData("text/plain", ev.target.querySelector("p").textContent);
-}
+  // ojito a esto...
 
+  // Primero cogemos el texto entero
+  let summaryText = ev.target.querySelector("summary").textContent;
+
+  // Buscamos primero buscamos el indice siguiente de la primera flecha (le ponemos el +1 para que coja pasado la flecha)
+  let startIndex = summaryText.indexOf('→') +1;
+  // Luego el indice de la segunda flecha
+  let endIndex = summaryText.indexOf('←', startIndex);
+  //Luego sacamos el string de enmedio (substring) y le quitamos espacios etc (trim)
+  let extractedText = summaryText.substring(startIndex, endIndex).trim();
+  ev.dataTransfer.setData("text/plain", extractedText);
+}
 
 // RICARDO
 function creaDivs(evento,contadorCesta,contenedor){
@@ -58,7 +68,7 @@ function drop(ev) {
   // Cogemos el div en el que vamos a meter los articulos
   let contenedor = document.getElementById("listas")
 
-
+  
   // Actualiza el contador de items en total. 
   contadorItem[data] = contadorItem[data] ? contadorItem[data] + 1 : 1;
   // Si contador tiene datos, le suma 1, si no, le asigna 1 como valor
@@ -67,7 +77,6 @@ function drop(ev) {
   switch (data) {
     case "Gotita":
       total += 10;
-      
       if (contadorCesta.includes(data)){
         let multi = document.getElementById(data+"MUT").children[0]
         multi.textContent = "x" + ++veces_gotita;
@@ -85,6 +94,7 @@ function drop(ev) {
       }
       break;
     case "Lluvia":
+      
       total += 100;
       if (contadorCesta.includes(data)){
         let multi = document.getElementById(data+"MUT").children[0]

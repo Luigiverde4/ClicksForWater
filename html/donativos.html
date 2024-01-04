@@ -25,30 +25,44 @@
         <div class="opciones">
             <div class="arrastrable" draggable="true" ondragstart="drag(event)">
                 <img src="../img/gota.png" alt="Gotita" class="itemImagen">
-                <p>Gotita</p>
+                <details>
+                    <summary>&rarr; Gotita &larr;</summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam est fuga consequatur vel veritatis dolores placeat ducimus explicabo qui facilis aut similique non provident sapiente voluptatem ipsa id, quae sed.</p>
+                    <p>Puede parecer</p>
+                </details>
                 <p>Pack 10 &euro;</p>
             </div>
             <div class="arrastrable" draggable="true" ondragstart="drag(event)">
                 <img src="../img/gota.png" alt="Gotita" class="itemImagen">
                 <img src="../img/gota.png" alt="Gotita" class="itemImagen">
-                <p>Gota</p>
+                <details>
+                    <summary>
+                        &rarr; Gota &larr;
+                    </summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam est fuga consequatur vel veritatis dolores placeat ducimus explicabo qui facilis aut similique non provident sapiente voluptatem ipsa id, quae sed.</p>
+                </details>
                 <p>Pack 50 &euro;</p>
             </div>
             <div class="arrastrable" draggable="true" ondragstart="drag(event)">
                 <img src="../img/gota.png" alt="Gotita" class="itemImagen">
                 <img src="../img/gota.png" alt="Gotita" class="itemImagen">
                 <img src="../img/gota.png" alt="Gotita" class="itemImagen">
-                <p>Lluvia</p>
+                <details>
+                    <summary>&rarr; Lluvia &larr;</summary>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam est fuga consequatur vel veritatis dolores placeat ducimus explicabo qui facilis aut similique non provident sapiente voluptatem ipsa id, quae sed.</p>
+                </details>
                 <p>Pack 100 &euro;</p>
             </div>
         </div>
+    <h2> Arrastra los packs a la cesta</h2>
     <div style = "display: flex;flex-direction: row;">
         <div id="cesta" ondrop="drop(event)" ondragover="allowDrop(event)">
-            Cesta
+            <span>Cesta</span>
             <div id="contador">
-                Total: 0
+                <span>Total: 0</span>
             </div>
             <div id = "listas">
+                <!-- Aqui van los productos de la cesta-->
             </div>
             <button id = "Vaciar" onclick="reseteoCesta()"> Vaciar</button>
             <button id = "checkout"> Checkout</button>
@@ -69,12 +83,6 @@
         </div>
 
     </div>
-    <div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, eius repudiandae nemo eos voluptate iure eveniet, quo soluta inventore adipisci voluptatibus eaque officia eligendi, doloribus aperiam minus labore nesciunt placeat!</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, eius repudiandae nemo eos voluptate iure eveniet, quo soluta inventore adipisci voluptatibus eaque officia eligendi, doloribus aperiam minus labore nesciunt placeat!</p>
-        <p> Aqui ponemos cosas como un log (como el de la práctica) para que sea interactivo y un form que aparezca</p>
-        </div>
-
     </main>
     <footer>
         <script src = "../js/iras.js"></script>

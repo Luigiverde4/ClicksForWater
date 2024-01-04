@@ -28,6 +28,12 @@ body{
     margin: 10px;
   }
 
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
 /* Cesta */
 #cesta {
   width: 200px;
@@ -53,6 +59,10 @@ body{
   margin: 2px 0px 2px 0px
 }
 
+#contador {
+  border-bottom:#333 2px solid ;
+  width: 100%;
+}
 /* Para que los divs y los parrafos de los articulos que contienen */
 #listas div > p, #listas div > div {
   width:60%;
@@ -90,6 +100,16 @@ body{
   justify-content: center;
   align-items: center;
 }
+#listas * {
+  text-align: center;
+}
 li{
   margin-bottom: 3px;
+}
+ul {
+  margin: 3px;
+}
+
+p {
+  margin: 0px;
 }
