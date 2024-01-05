@@ -60,5 +60,4 @@ h2 {
 .cuerpo {
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    gap: 5px;
 }
