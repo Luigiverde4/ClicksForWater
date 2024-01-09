@@ -8,52 +8,79 @@
     <link rel="shortcut icon" type="image/PNG" href="img/logo.png">
 </head>
 <body>
+    
     <script src = "js/iras.js"></script>
+    
+
+    <header>
+        
+        <div class = "cabeceras">
+            <h1>Clicks For Water</h1>
+            <p><i>Ayudemos al mundo</i></p>
+        </div>
+        
+    </header>
 
     <div style="display: flex;flex-direction: row;">
-        <div style="text-align: center; margin-top: 120px;">
-            <h1>Clicks <br>For<br> Water</h1>
-            <img src="img/logo2.jpeg" width=300px>
+        <div style="text-align: center; margin-top: 120px;margin-left: 30px;">
+            
+            <img src="img/logotecweb2.png" width=300px>
             <h3>
-                En clicks for water, nos proponemos<br> a través de una iniciativa  digital ayudar con la<br>
-                <em>gran necesidad de financiación </em> <br>para abrir pozos de agua en áreas necesitadas.    
+                En clicks for water, nos proponemos<br> a través de una iniciativa digital <br> recaudar fondos para garantizar <br>
+                el acceso al agua en la zonas<br> más necesitadas del planeta  
             </h3>
 
         </div>
-
-        <div>
-            <form style="position:relative;top: 20%; width: 750px; height: 350px;">
-                <fieldset>
-                    <legend>Inicio de sesión</legend>
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-    
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej. 1234567890" required>
+        <div style="display: flex;flex-direction: column; position:relative; left: 10%;margin-top:40px">
+            <div>
+                <form action="html/juego.html" method="post" style="position:relative; width: 750px; height: 220px;">
+                    <fieldset>
+                        <legend>Inicio de sesión</legend>
                     
-    
-                    <label for="suscripcion">Suscribirse:</label>
-                    <input type="checkbox" id="suscripcion" name="suscripcion" value="si">
-                </fieldset> 
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="telefono">Contraseña:</label>
+                        <input type="password" id="Contraseña" name="Contraseña" required>
+                        
+                    </fieldset> 
 
-                <a href="html/juego.html">   
                     <button>Iniciar sesión</button>
-                </a>
-            </form>
+                
+                </form>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <button id="open" onclick=mostrar()>¿En qué consiste nuestra iniciativa?</button>
+            </div>
+
+            <div style="display:none" id="cajita">
+                <div>
+                  <p>
+                    Nuestra iniciativa es muy simple: cuantos más clicks des en nuestra web,<br>
+                    más gente en el mundo tendrá acceso al agua. Así de fácil. Solo dando clicks<br>
+                    estás contribuyendo a mejorar el planeta. A qué esperas para empezar. Inicia<br>
+                    sesión y empieza a dar clicks
+
+                  </p>
+                  <button id="close" onclick=cerrar()>Cerrar</button>
+                </div>
+            </div>
+            
 
         </div>
         
-
-
     </div>
+
+    
+
     <div style="text-align: center;">
         <iframe style="text-align: center;" width="887" height="499" src="https://www.youtube.com/embed/6zeF9bNalmI" title="¿Se puede Medio-Derivar? 🤔 | Derivadas Fraccionarias" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <footer>
         <script src = "../js/iras.js"></script>
+        
             <nav>
                     <div class = "bloquesNAV" onclick = ira(10)>
                         <a href = "html/contacto.html">Contacta con nosotros</a>
@@ -72,6 +99,23 @@
                     </div>
             </nav>
     </footer>
+
+    <script>
+        var boton = document.getElementById("open")
+        var caja = document.getElementById("cajita")
+        var cierro = document.getElementById("close")
+        
+        function mostrar(){
+            caja.setAttribute("style","display:block")
+        }
+
+        function cerrar(){
+            caja.setAttribute("style","display:none")
+        }
+        
+
+    </script>
+
 
 </body>
 
