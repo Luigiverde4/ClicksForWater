@@ -21,6 +21,7 @@ function ira(i){
     significa que venimos de la landing page y hay que usar otra ruta*/
     if (i>=10){
         // Venimos de la landing pages
+        console.log("Hello")
         i -= 10
         window.location.href = sitios_html[i]
     }else{

@@ -3,6 +3,9 @@ body{
   font-family: 'Arial', sans-serif;
   background-color: rgb(158, 225, 249);
 }
+h2 {
+  margin: 3px 0px 5px;
+}
 /* Arrastrables */
 .opciones {
     display: flex;
@@ -28,7 +31,7 @@ body{
     margin: 10px;
   }
 
-
+/* Esto es para que no se vea el triangulito */
 summary {
   list-style: none;
   cursor: pointer;
@@ -79,10 +82,12 @@ summary {
 /* Informativo */
 
 #infoDonativos {
-  width: 550px;
+  width: 500px;
+  height: 200px;
 
-  position: absolute;
-  right: 10px;
+  position: relative;
+  left: 700px;
+  top: 20px;
   border: 2px #333 solid;
   border-radius: 10px;
 
