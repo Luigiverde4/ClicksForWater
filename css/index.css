@@ -59,27 +59,6 @@ main {
     text-decoration:underline;
     font-size: 25px;
 }
-/*Contenido del aside*/
-aside{
-    border: 5px black ridge;
-    background-color: rgb(232, 204, 153);
-
-    position: fixed;
-    width:15%;
-    top:35%;
-    left:10px;
-    z-index: 10;
-}
-aside * {
-    padding-left: 7px;
-    
-}
-summary{
-    text-decoration: underline;
-    font-weight: bold;
-    padding-bottom: 5px;
-}
-
 #cajita{
 
     background-color: rgb(150, 239, 243);

@@ -1,0 +1,30 @@
+/*Contenido del aside*/
+#nav-lat{
+    border: 5px black ridge;
+    background-color: rgb(232, 204, 153);
+
+    position: fixed;
+    width:15%;
+    top:35%;
+    left:10px;
+    z-index: 10;
+}
+#nav-lat * {
+    padding-left: 7px;
+    
+}
+#nav-lat nav {
+    flex-direction: column;
+    border: 1px solid black;
+}
+#nav-lat[open] nav {
+    display: flex;
+  }
+summary{
+    text-decoration: underline;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+#nav-lat nav {
+
+  }
