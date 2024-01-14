@@ -53,6 +53,10 @@ div.multi {
     margin: 2px;
     border-color: black;
     border-style: groove;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.info img {
@@ -60,7 +64,7 @@ div.info img {
     width:auto;
     border: 1px solid black;
     margin: 0 0 10px 10px;
-    float: right;
+
 }
 
 .cuerpo {
@@ -72,7 +76,6 @@ div.multi img {
     width: 200px;
     border: 1px solid black;
     margin: 0 0 10px 10px;
-    float: right;
 }
 
 /* Grid multimedia */
