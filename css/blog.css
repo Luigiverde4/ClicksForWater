@@ -46,9 +46,30 @@ div.info {
 
 }
 
+div.multi {
+    background-color:antiquewhite;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 2px;
+    border-color: black;
+    border-style: groove;
+}
+
 div.info img {
     height: 250px;
     width:auto;
+    border: 1px solid black;
+    margin: 0 0 10px 10px;
+    float: right;
+}
+
+.cuerpo {
+    justify-content: center;
+}
+
+div.multi img {
+    height: 150px;
+    width: 200px;
     border: 1px solid black;
     margin: 0 0 10px 10px;
     float: right;
@@ -60,5 +81,6 @@ h2 {
 }
 .cuerpo {
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(6, 16%);
+    gap: 5px;
 }
