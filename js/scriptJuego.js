@@ -147,3 +147,22 @@ function buttonClick() {
     }, 100);
     
 }
+
+
+// Instrucciones
+var instu = true
+function instrucciones(){
+    let instrucciones = document.getElementById("instrucciones")
+    let botoncin = document.getElementById("botoncin")
+    if (instu){
+        instrucciones.style.display = "none"
+        botoncin.textContent="Abrir instrucciones"
+        instu = false
+    }else{
+        instrucciones.style.display = "inline"
+        botoncin.textContent="Cerrar instrucciones"
+        instu = true
+
+    }
+
+}

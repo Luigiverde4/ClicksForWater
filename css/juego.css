@@ -27,6 +27,15 @@ main{
     
 }
 
+#instrucciones {
+    border: 3px ridge black;
+    background-color: rgb(249, 194, 226);
+    margin-right: 10px;
+    text-align: left;
+}
+#instrucciones p {
+    padding-left: 5px;
+}
 /* Botones */
 #botonYcontador{
     display: flex;
@@ -110,7 +119,7 @@ button {
     border: 2px #333 solid;
     border-radius: 10px;
 }
-.button-default, #tienda, #donativo, #tiendaDiv button {
+.button-default, #tienda, #donativo, #tiendaDiv button , #botoncin{
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -118,11 +127,20 @@ button {
 
 }
 
+#botoncin{
+    margin-top: 5px;
+    width: 50%;
+    background-color: aquamarine;
+}
+
 /* Area tienda */
 h2 {
+    text-align: center;
     text-decoration: underline;
     font-weight: bold;
+    margin: 0px;
 }
+
 #tiendaDiv {
     display: flex;
     flex-direction: column;
