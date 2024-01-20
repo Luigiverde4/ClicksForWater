@@ -213,7 +213,7 @@ function generarDonativo(){
 
     form.appendChild(loginButton);
 
-    // Agregar el formulario al body
+    // Agregar el formulario al div
     puntosDiv.appendChild(form);
 
     // Metemos el div de los puntos en el aside
