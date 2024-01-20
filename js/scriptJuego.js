@@ -79,7 +79,7 @@ function generarTienda(){
     }
 
     // Agrega el div de la tienda al elemento 'aside' del documento
-    let ElementoAside = document.querySelector("aside");
+    let ElementoAside = document.getElementById("asideVariable");
     ElementoAside.appendChild(tiendaDiv);
 
 
@@ -112,7 +112,7 @@ function cerrarTienda() {
     tiendaDiv = document.getElementById("tiendaDiv");
     // Si tiendaDiv existe, lo eliminamos
     if (tiendaDiv) {
-        let ElementoAside = document.querySelector("aside")
+        let ElementoAside = document.getElementById("asideVariable");
         ElementoAside.removeChild(tiendaDiv);
         tiendaOpen = false;
         // Cambiamos el boton para que pueda abrir la tienda

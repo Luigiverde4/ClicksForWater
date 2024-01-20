@@ -81,6 +81,9 @@ div.multi img {
 /* Grid multimedia */
 h2 {
     text-align: center;
+    margin: 0px;
+    text-decoration: underline;
+    font-size: 35px;
 }
 .cuerpo {
     display: grid;

@@ -4,7 +4,7 @@
     <title>Bienvenido</title>
     <link rel = "stylesheet" href="css/index.css">
     <link rel = "stylesheet" href="css/form.css">
-    <link rel = "stylesheet" href="css/header_y_footer.css">
+    <link rel = "stylesheet" href="css/header_footer_aside.css">
     <link rel="shortcut icon" type="image/PNG" href="img/logo.png">
 </head>
 <body>
@@ -20,64 +20,88 @@
         </div>
         
     </header>
-
-    <div style="display: flex;flex-direction: row;">
-        <div style="text-align: center; margin-top: 120px;margin-left: 30px;">
-            
-            <img src="img/logo.png" width=300px>
-            <h3>
-                En clicks for water, nos proponemos<br> a través de una iniciativa digital <br> recaudar fondos para garantizar <br>
-                el acceso al agua en la zonas<br> más necesitadas del planeta  
-            </h3>
-
-        </div>
-        <div style="display: flex;flex-direction: column; position:relative; left: 10%;margin-top:40px">
-            <div>
-                <form action="html/juego.html" method="post" style="position:relative; width: 750px; height: 220px;">
-                    <fieldset>
-                        <legend>Inicio de sesión</legend>
-                    
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-        
-                        <label for="telefono">Contraseña:</label>
-                        <input type="password" id="Contraseña" name="Contraseña" required>
-                        
-                    </fieldset> 
-
-                    <button>Iniciar sesión</button>
-                
-                </form>
-
-            </div>
-
-            <div style="text-align: center; margin-top: 50px;">
-                <button id="open" onclick=mostrar()>¿En qué consiste nuestra iniciativa?</button>
-            </div>
-
-            <div style="display:none" id="cajita">
-                <div>
-                  <p>
-                    Nuestra iniciativa es muy simple: cuantos más clicks des en nuestra web,<br>
-                    más gente en el mundo tendrá acceso al agua. Así de fácil. Solo dando clicks<br>
-                    estás contribuyendo a mejorar el planeta. A qué esperas para empezar. Inicia<br>
-                    sesión y empieza a dar clicks
-
-                  </p>
-                  <button id="close" onclick=cerrar()>Cerrar</button>
+    <aside id = "nav-lat">
+        <details>
+            <summary>
+                Quick travel
+            </summary>
+            <nav>
+                <div class = "bloquesNAV" onclick = ira(5)>
+                    <a href = "../landing.html">Página principal</a>
                 </div>
+                <div class = "bloquesNAV" onclick = "ira(1)">
+                    <a href = "donativos.html">Donativos</a>
+                </div>
+                <div class = "bloquesNAV" onclick = "ira(2)">
+                    <a href="juego.html">Dar clicks</a>
+                </div>
+                <div class = "bloquesNAV" onclick = "ira(3)">
+                    <a href="blog.html">Blog </a>
+                </div>
+                <div class = "bloquesNAV" onclick = ira(4)>
+                    <a href= "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html">ODS</a>
+                </div>
+            </nav>
+        </details>
+    </aside>
+    <main>
+        <div style="display: flex;flex-direction: row;">
+            <div style="text-align: center; margin-top: 120px;margin-left: 30px;">
+                
+                <img src="img/logo.png" width=300px>
+                <h3>
+                    En clicks for water, nos proponemos<br> a través de una iniciativa digital <br> recaudar fondos para garantizar <br>
+                    el acceso al agua en la zonas<br> más necesitadas del planeta  
+                </h3>
+    
+            </div>
+            <div style="display: flex;flex-direction: column; position:relative; left: 10%;margin-top:40px">
+                <div>
+                    <form action="html/juego.html" method="post" style="position:relative; width: 750px; height: 220px;">
+                        <fieldset>
+                            <legend>Inicio de sesión</legend>
+                        
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+            
+                            <label for="telefono">Contraseña:</label>
+                            <input type="password" id="Contraseña" name="Contraseña" required>
+                            
+                        </fieldset> 
+    
+                        <button>Iniciar sesión</button>
+                    
+                    </form>
+    
+                </div>
+    
+                <div style="text-align: center; margin-top: 50px;">
+                    <button id="open" onclick=mostrar()>¿En qué consiste nuestra iniciativa?</button>
+                </div>
+    
+                <div style="display:none" id="cajita">
+                    <div>
+                      <p>
+                        Nuestra iniciativa es muy simple: cuantos más clicks des en nuestra web,<br>
+                        más gente en el mundo tendrá acceso al agua. Así de fácil. Solo dando clicks<br>
+                        estás contribuyendo a mejorar el planeta. A qué esperas para empezar. Inicia<br>
+                        sesión y empieza a dar clicks
+    
+                      </p>
+                      <button id="close" onclick=cerrar()>Cerrar</button>
+                    </div>
+                </div>
+                
+    
             </div>
             
-
         </div>
-        
-    </div>
+        <div style="text-align: center;">
+            <iframe style="text-align: center;" width="887" height="499" src="https://www.youtube.com/embed/6zeF9bNalmI" title="¿Se puede Medio-Derivar? 🤔 | Derivadas Fraccionarias" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
 
-    
+    </main>
 
-    <div style="text-align: center;">
-        <iframe style="text-align: center;" width="887" height="499" src="https://www.youtube.com/embed/6zeF9bNalmI" title="¿Se puede Medio-Derivar? 🤔 | Derivadas Fraccionarias" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
     <footer>
         <script src = "../js/iras.js"></script>
         
