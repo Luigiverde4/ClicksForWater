@@ -1,4 +1,4 @@
-footer,header{
+footer, header {
     background-color: rgb(150, 239, 243);
     padding: 3px;
     margin-top: 10px;
@@ -8,60 +8,99 @@ footer,header{
     font-family: 'Arial', sans-serif;
 }
 
-/* Estilo del header */
-header{
+/* Header */
+header {
     display: flex;
     flex-direction: row;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
 }
+
 header h1 {
     font-size: 45px;
-    color:#333;
+    color: #333;
     margin-bottom: 10px;
 }
 
-.cabeceras{
-    flex:1;
+.cabeceras {
+    flex: 1;
 }
-.cabeceras:first-of-type img{
+
+.cabeceras:first-of-type img {
     position: absolute;
     left: 45px;
 }
+
 .cabeceras img {
     margin-top: 5px;
 }
-/* Estilo del footer */
-nav{
+
+/* Footer */
+footer nav {
     display: flex;
     flex-direction: row;
     height: 50px;
-    margin: 10px
-  }
-  
-  .bloquesNAV {
+    margin: 10px;
+}
+
+footer .bloquesNAV {
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
     display: flex;
     flex: 1;
     justify-content: center;
-    align-items: center; 
-  }
-  
-  .bloquesNAV:hover{
-      background-color: rgb(163, 174, 219);
-      font-size: 20px;
-      text-decoration-color: blue;
-      cursor:pointer
-  }
-a {
-    text-decoration-line: none;
-    color:blue;
+    align-items: center;
 }
-a:hover {
+
+footer .bloquesNAV:hover {
+    background-color: rgb(163, 174, 219);
+    font-size: 22px;
+    text-decoration-color: blue;
+    cursor: pointer;
+}
+
+footer a, footer a:visited {
+    color: blue;
+}
+
+
+/* Aside */
+#nav-lat {
+    border: 5px black ridge;
+    background-color: rgb(88, 94, 147);
+    position: fixed;
+    width: 10%;
+    top: 35%;
+    left: 10px;
+}
+
+#nav-lat nav {
+    flex-direction: column;
+    margin-top: 5px ;
+}
+summary {
+    text-decoration: underline;
+    font-weight: bold;
+
+    cursor: pointer;
+    list-style-type: none;
+}
+
+aside .bloquesNAV, summary, aside a, aside a:visited {
+    color: white;
+}
+
+aside .bloquesNAV:hover {
+    background-color: rgb(163, 174, 219);
+    font-size: 15px;
+    text-decoration-color: blue;
+    cursor: pointer;
+}
+
+/* Mix footer y aside */
+aside a:hover, footer a:hover {
     text-decoration: underline;
 }
-a:visited{
-    color: blue
+
+aside a, aside a:visited, footer a, footer a:visited {
+    text-decoration-line: none;
 }
