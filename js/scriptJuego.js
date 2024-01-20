@@ -1,6 +1,5 @@
 let contador;
 let trucosValue;
-let tiendaOpen = false;
 
 // Cada vez que se cargue la web, se carga el juego 
 window.onload = function() {

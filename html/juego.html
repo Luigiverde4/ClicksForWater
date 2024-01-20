@@ -6,18 +6,20 @@
     <link rel="stylesheet" href = "../css/juego.css">
     <link rel="stylesheet" href = "../css/header_footer_aside.css">
     <link rel="shortcut icon" type="image/PNG" href = "../img/logo.png">
+    <link rel = "stylesheet" href = "../css/form.css">
     <script src="../js/scriptJuego.js"></script>
     <script src="../js/tienda.js"></script>
 
 </head>
 <body>
+    <!--
     <script>
         // Pequeño script para que te alerte si te vas de la web
         window.addEventListener('beforeunload', function (event) {
             confirmationMessage = "Si sales de la web, perderás tus puntos no enviados!"
             event.returnValue = confirmationMessage; // Standard for most browsers
         });
-        </script>
+        </script>-->
     <header>
         <div class = "cabeceras">
             <a href = "../landing.html"><img src = "../img/logo.png" height = "120px" ></a>
@@ -86,7 +88,7 @@
                 <button id="tienda" onclick="abrirTienda()">Abrir tienda</button>
             </div>
             <div class = "botones">
-                <button id="donativo">Enviar puntos</button>
+                <button id="donativo" onclick="abrirDonativo()">Enviar puntos</button>
             </div>
         </div>
     </main>
