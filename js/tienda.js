@@ -138,20 +138,14 @@ function dona_cambiarBoton(abierta){
     }
 }
 
-// Funcion para generar el bloque de la tienda
+// Funcion para generar el bloque de envio de puntos
 function generarDonativo(){
     
     // Creamos el div y le ponemos un ID
     puntosDiv = document.createElement("div");
     puntosDiv.id = "puntosDiv";
 
-
-    // Le metemos el titulo
-    tituloPuntos = document.createElement("h2")
-    tituloPuntos.textContent = "Enviar puntos"
-    puntosDiv.append(tituloPuntos)
-    
-    // Bucle para ir generando los botones
+    // Creamos el forms
 
     // Crear el formulario
     var form = document.createElement('form');
@@ -160,70 +154,104 @@ function generarDonativo(){
     // Crear el fieldset
     var fieldset = document.createElement('fieldset');
     var legend = document.createElement('legend');
-    legend.textContent = 'Inicio de sesión';
+    legend.textContent = 'Enviar puntos';
     fieldset.appendChild(legend);
+
+
+    // Nombre
+
+        // Label
+    var nombreLabel = document.createElement('label');
+    nombreLabel.setAttribute('for', 'nombre');
+    nombreLabel.textContent = 'Nombre y Apellidos:';
+    fieldset.appendChild(nombreLabel);
+
+
+        // Input
+    var nombreInput = document.createElement('input');
+    nombreInput.type = 'text';
+    nombreInput.id = 'nombre';
+    nombreInput.name = 'nombre';
+    nombreInput.placeholder = "Nombre Apellido Apellido"
+    nombreInput.required = true;
+    fieldset.appendChild(nombreInput);
 
     // Correo electrónico
 
-    // Label
+        // Label
     var emailLabel = document.createElement('label');
     emailLabel.setAttribute('for', 'email');
     emailLabel.textContent = 'Correo electrónico:';
 
-        // Metemos el fieldset
-    fieldset.appendChild(emailLabel);
-
-    // Input
+        // Input
     var emailInput = document.createElement('input');
     emailInput.type = 'email';
     emailInput.id = 'email';
     emailInput.name = 'email';
+    emailInput.placeholder = "nombre@correo.com"
     emailInput.required = true;
 
-        // Metemos el fieldset
+        // Lo metemos al forms
+    fieldset.appendChild(emailLabel);
     fieldset.appendChild(emailInput);
 
-    // Contraseña
 
-    // Label
-    var passwordLabel = document.createElement('label');
-    passwordLabel.setAttribute('for', 'password');
-    passwordLabel.textContent = 'Contraseña:';
-    fieldset.appendChild(passwordLabel);
+    // Cantidad de puntos
 
+        // Label
+    var puntosLabel = document.createElement("label")
+    puntosLabel.setAttribute('for', 'puntosid');
+    puntosLabel.textContent = 'Puntos a enviar:';
 
-    // Input
-    var passwordInput = document.createElement('input');
-    passwordInput.type = 'password';
-    passwordInput.id = 'password';
-    passwordInput.name = 'password';
-    passwordInput.required = true;
-    fieldset.appendChild(passwordInput);
+        // Input
+    var puntosInput = document.createElement('input');
+    puntosInput.type = 'text';
+    puntosInput.id = 'puntosid';
+    puntosInput.name = 'puntos';
+    puntosInput.disabled = "true"
+    var cant_puntos = document.getElementById("puntos").textContent
+    puntosInput.value = cant_puntos
 
-        // Metemos el fieldset
+        // Lo metemos al forms
+    fieldset.appendChild(puntosLabel);
+    fieldset.appendChild(puntosInput);
+
+    // Metemos todo al forms
     form.appendChild(fieldset);
 
-    // Crear el botón de inicio de sesión
-    var loginButton = document.createElement('button');
-    loginButton.textContent = 'Iniciar sesión';
-    loginButton.type = 'button';
-    loginButton.addEventListener('click', function () {
-        iniciarSesion();
-    });
+    // Botón Envio de puntos
+    var puntosButton = document.createElement('button');
+    puntosButton.textContent = 'Enviar puntos';
+    puntosButton.type = 'button';
+    puntosButton.onclick = enviarPuntos
 
-    form.appendChild(loginButton);
+    // Lo metemos al forms
+    form.appendChild(puntosButton);
 
-    // Agregar el formulario al div
+    // Botón actulizador de puntos
+    var updateButton = document.createElement('button');
+    updateButton.textContent = 'Actualizar puntos a enviar';
+    updateButton.type = 'button';
+    updateButton.style.marginLeft = "5px"
+    updateButton.onclick = actualizarPuntos
+
+    // Lo metemos al forms
+    form.appendChild(updateButton);
+
+    // Parrafo informativo
+    var informativo = document.createElement("p")
+    informativo.id = "informativo"
+    fieldset.append(informativo)
+
+    // Agregar el formulario al body
     puntosDiv.appendChild(form);
 
     // Metemos el div de los puntos en el aside
     let ElementoAside = document.getElementById("asideVariable");
     ElementoAside.appendChild(puntosDiv);
-
-
 }
 
-// Funcion para abrir la tienda
+// Funcion para abrir el envio de puntos
 function abrirDonativo() {
     if (donaOpen) {
         // Si ya está abierta, paramos
@@ -237,7 +265,7 @@ function abrirDonativo() {
 }
 
 
-// Para cerrar la tienda
+// Para cerrar el envio de puntos
 function cerrar_Donativo() {
     puntosDiv = document.getElementById("puntosDiv");
     // Si tiendaDiv existe, lo eliminamos
@@ -248,4 +276,34 @@ function cerrar_Donativo() {
         // Cambiamos el boton para que pueda abrir la tienda
         dona_cambiarBoton("cerrada")
     }
+}
+
+var puntos_anteriores = 0;
+
+function enviarPuntos() {
+    let cant_puntos = document.getElementById("puntos");
+    let informativo = document.getElementById("informativo"); // Usado in actualizarPuntos
+    informativo.innerHTML = ""
+    puntos_anteriores = 0;
+    actualizarPuntos();
+    if (cant_puntos == 0){
+        informativo.innerHTML += ` <br>No hay puntos para enviar`;
+    }else {
+        informativo.innerHTML += ` <br>Total de puntos enviados: ${cant_puntos.textContent}`;
+    }
+    
+    cant_puntos.textContent = 0;
+}
+
+function actualizarPuntos(){
+    let cant_puntos = document.getElementById("puntos").textContent
+    let puntosInput = document.getElementById("puntosid")
+
+    if (cant_puntos == puntos_anteriores){
+        informativo.textContent = "Ya están los puntos actualizados"
+    }else{
+        informativo.textContent = "" 
+        puntos_anteriores = cant_puntos
+    }
+    puntosInput.value = cant_puntos
 }
