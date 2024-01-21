@@ -151,7 +151,7 @@ function generarDonativo(){
     var form = document.createElement('form');
     form.id = 'form_css';
 
-    // Crear el fieldset
+    // Crear el fieldset donde van nuestros inputs y labels
     var fieldset = document.createElement('fieldset');
     var legend = document.createElement('legend');
     legend.textContent = 'Enviar puntos';
@@ -164,7 +164,7 @@ function generarDonativo(){
     var nombreLabel = document.createElement('label');
     nombreLabel.setAttribute('for', 'nombre');
     nombreLabel.textContent = 'Nombre y Apellidos:';
-    fieldset.appendChild(nombreLabel);
+    
 
 
         // Input
@@ -174,6 +174,9 @@ function generarDonativo(){
     nombreInput.name = 'nombre';
     nombreInput.placeholder = "Nombre Apellido Apellido"
     nombreInput.required = true;
+
+        // Lo metemos en le fieldset
+    fieldset.appendChild(nombreLabel);
     fieldset.appendChild(nombreInput);
 
     // Correo electrónico
@@ -191,7 +194,7 @@ function generarDonativo(){
     emailInput.placeholder = "nombre@correo.com"
     emailInput.required = true;
 
-        // Lo metemos al forms
+        // Lo metemos al fieldset
     fieldset.appendChild(emailLabel);
     fieldset.appendChild(emailInput);
 
@@ -212,9 +215,16 @@ function generarDonativo(){
     var cant_puntos = document.getElementById("puntos").textContent
     puntosInput.value = cant_puntos
 
-        // Lo metemos al forms
+        // Lo metemos al fieldset
     fieldset.appendChild(puntosLabel);
     fieldset.appendChild(puntosInput);
+
+    // Ratio
+
+    var ratioLabel = document.createElement("label")
+    ratioLabel.textContent = "Actualmente 100 000 puntos son 0.01 €"
+        // Lo metemos al fieldset
+    fieldset.appendChild(ratioLabel)
 
     // Metemos todo al forms
     form.appendChild(fieldset);
@@ -281,28 +291,30 @@ function cerrar_Donativo() {
 var puntos_anteriores = 0;
 
 function enviarPuntos() {
-    let cant_puntos = document.getElementById("puntos");
+    let cant_puntos = document.getElementById("puntos"); // Puntos del botón
+    let puntosInput = document.getElementById("puntosid")   // Usado en actualizarPuntos, Puntos del input
     let informativo = document.getElementById("informativo"); // Usado in actualizarPuntos
     informativo.innerHTML = ""
     puntos_anteriores = 0;
+
     actualizarPuntos();
-    if (cant_puntos == 0){
+    if (cant_puntos.textContent == 0){
         informativo.innerHTML += ` <br>No hay puntos para enviar`;
     }else {
         informativo.innerHTML += ` <br>Total de puntos enviados: ${cant_puntos.textContent}`;
     }
     
     cant_puntos.textContent = 0;
+    puntosInput.value = 0;
 }
 
 function actualizarPuntos(){
     let cant_puntos = document.getElementById("puntos").textContent
     let puntosInput = document.getElementById("puntosid")
-
     if (cant_puntos == puntos_anteriores){
         informativo.textContent = "Ya están los puntos actualizados"
     }else{
-        informativo.textContent = "" 
+        informativo.textContent = "Puntos actualizados" 
         puntos_anteriores = cant_puntos
     }
     puntosInput.value = cant_puntos
