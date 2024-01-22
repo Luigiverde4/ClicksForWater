@@ -37,7 +37,7 @@ li{
   font-size: 18px
 }
 
-#cajita{
+#cajita,#cajita2{
   margin-left: 20px;
   background-color: rgb(150, 239, 243);
   text-align: left;
@@ -47,7 +47,7 @@ li{
   border-radius: 10px;
   font-family: 'Arial', sans-serif;
   width: 500px;
-  height: 300px;
+ 
 }
 
 input[type="button"]{
@@ -59,4 +59,8 @@ input[type="button"]{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+#borrar{
+  margin-top: 10px;
+  
 }
