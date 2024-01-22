@@ -86,13 +86,13 @@ function drop(ev) {
     case "Gotita":
       total += 10;
       if (contadorCesta.includes(data)){
-        let multi = document.getElementById(data+"MUT").children[0]
-        multi.textContent = "x" + ++veces_gota;
+        let multi = document.getElementById(data+"MUT").children[0] // Busca el Multiplicador especifico
+        multi.textContent = "x" + ++veces_gota;                     // lo incrementamos
       }else{
-        creaDivs(data,contadorCesta,contenedor)
+        creaDivs(data,contadorCesta,contenedor) // si no esta en la cesta ya, lo creamos
       }
       break;
-    case "Gota":
+    case "Gota":  // igual que arriba pero para gota etc
       total += 50;
       if (contadorCesta.includes(data)){
         let multi = document.getElementById(data+"MUT").children[0]
@@ -159,7 +159,7 @@ function reseteoCesta(){
 }
 
 // Checkout
-
+// funcion para abrir la zona checkout
 function abrirCheck(){
   // Cogemos el div principal y lo hacemos aparecer
   let checkDiv = document.getElementById("checkDiv")
@@ -170,7 +170,7 @@ function abrirCheck(){
   let boton_checkout = document.getElementById("checkout")
   boton_checkout.style.display = "none"
 }
-
+// Funcion para ocultar el checkout
 function cerrarCheck(){
   let checkDiv = document.getElementById("checkDiv")
   let boton_checkout = document.getElementById("checkout")
@@ -179,16 +179,17 @@ function cerrarCheck(){
   boton_checkout.style.display = "inline"
 }
 
+// Esta funcion envia el checkout
 function enviarCheck(){
   let nombreInput = document.getElementById("nombre")
   let emailInput = document.getElementById("email")
   let informativo = document.getElementById("informativo")
 
-  if (nombreInput.checkValidity() && emailInput.checkValidity()){
+  if (nombreInput.checkValidity() && emailInput.checkValidity()){ // Si ambas estan checkeadas, para que no reinicie la pagina, se procede
     reseteoCesta()
     cerrarCheck()
     informativo.textContent = "Proceda al correo introducido para seguir con el proceso de pago"
-  }else {
+  }else { // Si no, no se procede
     informativo.textContent = "Porfavor, rellene los formularios"
   }
 }
