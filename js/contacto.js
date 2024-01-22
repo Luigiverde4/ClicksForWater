@@ -1,13 +1,16 @@
+
 function generarRespuesta(){
-    var body = document.getElementById("contenedor_form")
+    var contenedor = document.getElementById("contenedor_form")
     var nombre = document.getElementById("nombre").value
     var email = document.getElementById("email").value
     var telefono = document.getElementById("telefono").value
     var edad = document.getElementById("edad").value
     var genero = document.getElementById("genero").value
-    var suscripcion = document.getElementById("suscripcion").value
     var comentarios = document.getElementById("comentarios").value
+    var formulario = document.getElementById("form_css")
+    var resultado = document.getElementById("cajita")
 
+    formulario.style.display = "None"
 
     var resultado = document.createElement("div")
     resultado.id = "cajita"
@@ -40,11 +43,31 @@ function generarRespuesta(){
     comentarios_resp.innerHTML = comentarios
     resultado.append(comentarios_resp)
 
-    body.appendChild(resultado)
+    contenedor.appendChild(resultado)
+
+
+    var boton = document.createElement("input")
+    boton.type = "button"
+    boton.value = "Volver a enviar"
+    boton.onclick = reenviar
+    boton.id = "reenviar"
+    contenedor.appendChild(boton)
 
     return false;
 
 
 
+
+}
+
+
+function reenviar(){
+    var contenedor = document.getElementById("contenedor_form")
+    var formulario = document.getElementById("form_css")
+    formulario.style.display = "block"
+    var resultado = document.getElementById("cajita")
+    contenedor.removeChild(resultado)
+    var boton = document.getElementById("reenviar")
+    contenedor.removeChild(boton)
 
 }
