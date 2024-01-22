@@ -2,21 +2,40 @@ body{
     background-color: rgb(158, 225, 249);
 }
 /* Contenido del header */
+#principal {
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px solid black;
+    
+}
 
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration:underline;
-    color: blue;
-    font-size: 70px;
+#img_texto {
+    text-align: center;
+    flex: 2;
+
+}
+#info_nuestra{
+    display: flex;
+    flex-direction: column;
+    flex:3;
+
+    background-color: rgb(238, 220, 162);
+    border: 3px solid black;
+    margin: 5px;
+    border-radius: 10px;
+}
+#video {
     text-align: center;
 }
-h3{
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration:underline;
-    color: black;
-    font-size: 25px;
-}
 
+#descripcion_imagen {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 25px;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
 
 #comenzar{
     padding:40px;
@@ -32,14 +51,27 @@ h3{
 
 
 
-#cajita,#cajetin{
+.texto{
 
-    background-color: rgb(150, 239, 243);
-    padding: 3px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    background-color:antiquewhite;
     border: 3px solid black;
     border-radius: 10px;
     text-align: center;
     font-family: 'Arial', sans-serif;
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+}
+.divTitulosInfo {
+    text-align: center;
+
+    background-color:rgb(255, 186, 82);
+
+    border: 2px groove black;
+    margin-bottom: 10px;
 }

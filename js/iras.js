@@ -13,7 +13,7 @@ function ira(i){
         "juego.html",
         "blog.html",
         "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html",
-        "../landing.html"
+        "../index.html"
     ]
 
     /* Dependiendo de si estamos en la landig page, la ruta tiene que tomar un camino
