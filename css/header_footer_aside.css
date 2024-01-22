@@ -1,4 +1,4 @@
-footer, header {
+footer, header, #nav_index {
     background-color: rgb(150, 239, 243);
     padding: 3px;
     margin-top: 10px;
@@ -34,14 +34,14 @@ header h1 {
 }
 
 /* Footer */
-footer nav {
+footer nav, #nav_index nav {
     display: flex;
     flex-direction: row;
     height: 50px;
     margin: 10px;
 }
 
-footer .bloquesNAV {
+footer .bloquesNAV, #nav_index .bloquesNAV {
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
@@ -51,14 +51,14 @@ footer .bloquesNAV {
     align-items: center;
 }
 
-footer .bloquesNAV:hover {
+footer .bloquesNAV:hover , #nav_index .bloquesNAV:hover{
     background-color: rgb(163, 174, 219);
     font-size: 22px;
     text-decoration-color: blue;
     cursor: pointer;
 }
 
-footer a, footer a:visited {
+footer a, footer a:visited , #nav_index a, #nav_index a:visited{
     color: blue;
 }
 
@@ -98,10 +98,10 @@ aside .bloquesNAV:hover {
 }
 
 /* Mix footer y aside */
-aside a:hover, footer a:hover {
+aside a:hover, footer a:hover , #nav_index a:hover{
     text-decoration: underline;
 }
 
-aside a, aside a:visited, footer a, footer a:visited {
+aside a, aside a:visited, footer a, footer a:visited, #nav_index a, #nav_index a:visited {
     text-decoration-line: none;
 }
