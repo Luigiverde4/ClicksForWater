@@ -1,10 +1,5 @@
 function generarRespuesta(){
-
-    
-    
-
     var body = document.getElementById("contenedor_form")
-    body.removeChild("cajita")
     var nombre = document.getElementById("nombre").value
     var email = document.getElementById("email").value
     var telefono = document.getElementById("telefono").value
