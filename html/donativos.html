@@ -5,6 +5,7 @@
     <title>Donativos</title>
     <link rel="stylesheet" href = "../css/donativo.css">
     <link rel="stylesheet" href = "../css/header_footer_aside.css">
+    <link rel = "stylesheet" href = "../css/form.css">
     <link rel="shortcut icon" type="image/PNG" href = "../img/logo.png">
     <script src="../js/donativo.js"></script>
 </head>
@@ -22,6 +23,13 @@
         </div>
     </header>
     <main>
+    <!--<script>
+        // Pequeño script para que te alerte si te vas de la web
+        window.addEventListener('beforeunload', function (event) {
+            confirmationMessage = "Si sales de la web, perderás tu cesta!"
+            event.returnValue = confirmationMessage;
+        });
+        </script>!-->
     <!--Productos-->
         <h2> Arrastra los packs a la cesta</h2>
         <div class="opciones">
@@ -57,35 +65,76 @@
             </div>
         </div>
     <!--Cesta-->
-    <div style = "display: flex;flex-direction: row;">
-        <div id="cesta" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <span>Cesta</span>
-            <div id="contador">
-                <span>Total: 0</span>
+        <div style = "display: flex;flex-direction: row;">
+            <div id="cesta" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span>Cesta</span>
+                <div id="contador">
+                    <span>Total: 0</span>
+                </div>
+                <div id = "listas">
+                    <!-- Aqui van los productos de la cesta-->
+                </div>
+                <button id = "Vaciar" onclick="reseteoCesta()"> Vaciar</button>
+                <button id = "checkout" onclick="abrirCheck()"> Checkout</button>
             </div>
-            <div id = "listas">
-                <!-- Aqui van los productos de la cesta-->
+
+            <div id = "infoDonativos">
+                <h2>Nuestros packs</h2>
+                <p>Tenemos tres packs distintos preparados para escoger por los donadores. Estos son los packs de 
+                    <div id = "contenedor_listas">
+                        <ul>
+                            <li> Pack Gotita, 10 &euro;</li>
+                            <li> Pack Gota, 50 &euro;</li>
+                            <li> Pack lluvia, 100 &euro;</li>
+                        </ul>
+                    </div>
+                    Ofrecemos tres rangos distintos de precio para que todos tengan una oportunidad de donar.
+                </p>
             </div>
-            <button id = "Vaciar" onclick="reseteoCesta()"> Vaciar</button>
-            <button id = "checkout"> Checkout</button>
+
+        </div>
+    </main>
+    <p id = "informativo"></p>
+    <div id = "checkDiv">
+        <div id = "tituloCheck">
+            <h2 >Checkout</h2>
+        </div>
+        <div id = "restoCheck">
+            <div id = "checkInfo" class = "bloque">
+                <form id = "form_css">
+                    <fieldset>
+                        <legend>Información de factura</legend>
+                    
+                        <label for="email">Correo electrónico:*</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="nombre">Nombre y Apellidos:*</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        
+                    </fieldset> 
+                </form>
+            </div>
+            <div id = "checkResumen"class = "bloque">
+                <p>Packs escogidos</p>
+            </div>
+            <div id = "checkBotones" class = "bloque">
+                <div class = "bloque" style = "flex:2">
+                    <button onclick="enviarCheck()" id = "checkoutReal">Checkout</button>
+                </div>
+                <div class = "bloque" style = "flex:2">
+                    <button onclick = "cerrarCheck()" id = "cerrarCheck">Cerrar Checkout</button> 
+                </div>
+                <div class = "bloque" style = "flex:1">
+                    <div id="contador2">
+                        <span>Total: 0</span>
+                    </div>
+                </div>                         
+            </div>
+    
         </div>
 
-        <div id = "infoDonativos">
-            <h2>Nuestros packs</h2>
-            <p>Tenemos tres packs distintos preparados para escoger por los donadores. Estos son los packs de 
-                <div id = "contenedor_listas">
-                    <ul>
-                        <li> Pack Gotita, 10 &euro;</li>
-                        <li> Pack Gota, 50 &euro;</li>
-                        <li> Pack lluvia, 100 &euro;</li>
-                    </ul>
-                </div>
-                Ofrecemos tres rangos distintos de precio para que todos tengan una oportunidad de donar.
-            </p>
-        </div>
 
     </div>
-    </main>
     <aside id = "nav-lat">
         <details>
             <summary>
