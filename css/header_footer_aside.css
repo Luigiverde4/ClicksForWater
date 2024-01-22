@@ -85,10 +85,14 @@ summary {
 
     cursor: pointer;
     list-style-type: none;
+    text-align: center;
 }
 
-aside .bloquesNAV, summary, aside a, aside a:visited {
+aside .bloquesNAV, aside summary, aside a, aside a:visited {
     color: white;
+    background-color: rgb(88, 94, 147);
+    border: 0px;
+    width: 100%;
 }
 
 aside .bloquesNAV:hover {
