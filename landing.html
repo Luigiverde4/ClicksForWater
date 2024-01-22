@@ -27,16 +27,16 @@
             </summary>
             <nav>
                 <div class = "bloquesNAV" onclick = ira(5)>
-                    <a href = "../landing.html">Página principal</a>
+                    <a href = "landing.html">Página principal</a>
                 </div>
                 <div class = "bloquesNAV" onclick = "ira(1)">
-                    <a href = "donativos.html">Donativos</a>
+                    <a href = "html/donativos.html">Donativos</a>
                 </div>
                 <div class = "bloquesNAV" onclick = "ira(2)">
-                    <a href="juego.html">Dar clicks</a>
+                    <a href="html/juego.html">Dar clicks</a>
                 </div>
                 <div class = "bloquesNAV" onclick = "ira(3)">
-                    <a href="blog.html">Blog </a>
+                    <a href="html/blog.html">Blog </a>
                 </div>
                 <div class = "bloquesNAV" onclick = ira(4)>
                     <a href= "https://www.upv.es/noticias-upv/noticia-12565-los-ods-en-las-es.html">ODS</a>
@@ -55,28 +55,13 @@
                 </h3>
     
             </div>
-            <div style="display: flex;flex-direction: column; position:relative; left: 10%;margin-top:40px">
+            <div style="display: flex;flex-direction: column; position:relative; left: 10%;margin-top:40px;margin-bottom:10px">
                 <div>
-                    <form action="html/juego.html" method="post" style="position:relative; width: 750px; height: 220px;" id = "form_css">
-                        <fieldset>
-                            <legend>Inicio de sesión</legend>
-                        
-                            <label for="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" required>
-            
-                            <label for="telefono">Contraseña:</label>
-                            <input type="password" id="Contraseña" name="Contraseña" required>
-                            
-                        </fieldset> 
-    
-                        <button>Iniciar sesión</button>
-                    
-                    </form>
-    
+                <div>
+                    <p>abcdefg</p>
                 </div>
-    
                 <div style="text-align: center; margin-top: 50px;">
-                    <button id="open" onclick=mostrar()>¿En qué consiste nuestra iniciativa?</button>
+                    <button onclick=mostrar(1)>¿En qué consiste nuestra iniciativa?</button>
                 </div>
     
                 <div style="display:none" id="cajita">
@@ -88,17 +73,34 @@
                         sesión y empieza a dar clicks
     
                       </p>
-                      <button id="close" onclick=cerrar()>Cerrar</button>
+                      <button id="close" onclick=cerrar(1)>Cerrar</button>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <button onclick=mostrar(2)>¿Quienes somos?</button>
+                </div>
+    
+                <div style="display:none" id="cajetin">
+                    <div>
+                      <p>
+                        El equipo:
+                        Ricardo: Esquizo
+                        Robin: Esquizo
+                        Jesus: Tomellosero
+                        Carlos: Fan del Villareal
+    
+                      </p>
+                      <button id="close" onclick=cerrar(2)>Cerrar</button>
                     </div>
                 </div>
                 
-    
+                <br>
             </div>
-            
+            <div style="text-align: center;">
+                <iframe style="text-align: center;" width="887" height="499" src="https://www.youtube.com/embed/6zeF9bNalmI" title="¿Se puede Medio-Derivar? 🤔 | Derivadas Fraccionarias" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>  
         </div>
-        <div style="text-align: center;">
-            <iframe style="text-align: center;" width="887" height="499" src="https://www.youtube.com/embed/6zeF9bNalmI" title="¿Se puede Medio-Derivar? 🤔 | Derivadas Fraccionarias" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+       
 
     </main>
 
@@ -126,15 +128,26 @@
 
     <script>
         var boton = document.getElementById("open")
-        var caja = document.getElementById("cajita")
+        var caja1 = document.querySelector("#cajita")
+        var caja2 = document.querySelector("#cajetin")
         var cierro = document.getElementById("close")
         
-        function mostrar(){
-            caja.setAttribute("style","display:block")
+        function mostrar(x){
+            if (x==1){
+                caja1.setAttribute("style","display:block");
+            } 
+            else if (x==2) {
+                caja2.setAttribute("style","display:block");
+            }
         }
 
-        function cerrar(){
-            caja.setAttribute("style","display:none")
+        function cerrar(y){
+            if (y==1){
+                caja1.setAttribute("style","display:none")
+            } 
+            else {
+                caja2.setAttribute("style","display:none")
+            }
         }
         
 

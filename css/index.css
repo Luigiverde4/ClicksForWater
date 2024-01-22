@@ -16,19 +16,8 @@ h3{
     color: black;
     font-size: 25px;
 }
-.titulo{
-    flex:1
-}
-.titulo h1 {
-    position: relative;
-    margin-left:27%;
-}
-/* Contenido del main*/
-main {
-    justify-content: center;
-    text-align: center;
-    padding: 10px
-}
+
+
 #comenzar{
     padding:40px;
     background-color: rgb(66, 189, 198);
@@ -40,30 +29,15 @@ main {
     background-color: rgb(90, 222, 231);
     transform: scale(0.85);
 }
-.informativo {
-    justify-content: center;
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;;
-    z-index: 1;
 
-}
-.informativo p {
-    font-size: 20px;
-    position:relative;
-    margin: 1% 20% 0 20%;
-}
 
-.informativo p:last-of-type{
-    font-weight: bold;
-    text-decoration:underline;
-    font-size: 25px;
-}
-#cajita{
+
+#cajita,#cajetin{
 
     background-color: rgb(150, 239, 243);
     padding: 3px;
     margin-top: 10px;
+    margin-bottom: 10px;
     border: 3px solid black;
     border-radius: 10px;
     text-align: center;
