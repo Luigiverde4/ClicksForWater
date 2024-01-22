@@ -49,17 +49,18 @@ footer .bloquesNAV, #nav_index .bloquesNAV {
     flex: 1;
     justify-content: center;
     align-items: center;
+    color: blue;
+
+    background-color: rgb(150, 239, 243);
+    border: 0px;
+    
 }
 
 footer .bloquesNAV:hover , #nav_index .bloquesNAV:hover{
     background-color: rgb(163, 174, 219);
-    font-size: 22px;
     text-decoration-color: blue;
+    font-size: 25px;
     cursor: pointer;
-}
-
-footer a, footer a:visited , #nav_index a, #nav_index a:visited{
-    color: blue;
 }
 
 
@@ -98,10 +99,7 @@ aside .bloquesNAV:hover {
 }
 
 /* Mix footer y aside */
-aside a:hover, footer a:hover , #nav_index a:hover{
+aside p:hover, footer p:hover , #nav_index p:hover{
     text-decoration: underline;
-}
-
-aside a, aside a:visited, footer a, footer a:visited, #nav_index a, #nav_index a:visited {
-    text-decoration-line: none;
+    text-decoration-color: blue;
 }
