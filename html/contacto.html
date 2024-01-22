@@ -36,17 +36,17 @@
                 <li>Otros motivos</li>
             </ul>
         </div>
-        <div id = "contenedor_form">
+        <div id = "contenedor_form" style="display: flex; flex-direction: column; ">
             <form style= "width: 300px;" id = "form_css" onsubmit="return generarRespuesta()">
                 <fieldset>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
 
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" placeholder="nombre@correo.com" name="email" required>
 
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}"  required>
+                    <input type="tel" id="telefono" name="telefono" placeholder="123456789" pattern="[0-9]{9}"  required>
                     
                     <label for="edad">Edad:</label>
                     <input type="number" id="edad" name="edad" min="18" max="99" required>
@@ -68,6 +68,9 @@
                     <p style = "margin-top: 0px;">Acepto y conseinto recibir correos relacionados sobre la encuesta que he realizado</p>
                 </fieldset>    
                     <button type="submit">Enviar</button>
+                    <input style ="margin-top:10px" type = "reset" value="Borrar todo">
+
+                    
             </form>
         </div>
         
