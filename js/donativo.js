@@ -81,7 +81,7 @@ function drop(ev) {
   contadorItem[data] = contadorItem[data] ? contadorItem[data] + 1 : 1;
   // Si contador tiene datos, le suma 1, si no, le asigna 1 como valor
 
-  // Actualiza el total
+  // Actualiza el total y las multiplicaciones
   switch (data) {
     case "Gotita":
       total += 10;
@@ -120,12 +120,14 @@ function drop(ev) {
 function updateCounter() {
   var counter = document.getElementById("contador");
   counter.textContent = "Total: " + total + "\u20AC";
-
+  // Y en el checkout
   var counter2 = document.getElementById("contador2");
   counter2.textContent = "Total: " + total + "\u20AC";
 
 }
-// Ricardo
+// Ricardo testing
+
+// reseteo de la cesta y checkout
 function reseteoCesta(){
   total = 0
   updateCounter()
