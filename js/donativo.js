@@ -1,6 +1,8 @@
 var contadorItem = {};
 var total = 0;
 
+// La parte del checkout ya funciona
+
 // Funcion necesaria para permitir el dropeo y solo cuando se llame
 function allowDrop(ev) {
   ev.preventDefault();
@@ -43,7 +45,7 @@ function creaDivs(evento,contadorCesta,contenedor){
   // Creamos el div del multiplicador
   let divMUT = document.createElement("div");
   divMUT.id = evento + "MUT"; // MUT de multiplicador
-
+  divMUT.className = "multiplicador"
   // Metemos el multiplicador
   let parraMUT = document.createElement("p");
   parraMUT.textContent = "x1";
@@ -53,6 +55,12 @@ function creaDivs(evento,contadorCesta,contenedor){
   divROW.append(divin)
   divROW.append(divMUT)
   contenedor.append(divROW);
+
+  // CHECKOUT
+  let checkResumen = document.getElementById("checkResumen")
+
+  checkResumen.append(divin.cloneNode(true))
+    
 }
 
 // Contadores de divs y de veces metido
@@ -79,7 +87,7 @@ function drop(ev) {
       total += 10;
       if (contadorCesta.includes(data)){
         let multi = document.getElementById(data+"MUT").children[0]
-        multi.textContent = "x" + ++veces_gotita;
+        multi.textContent = "x" + ++veces_gota;
       }else{
         creaDivs(data,contadorCesta,contenedor)
       }
@@ -112,6 +120,10 @@ function drop(ev) {
 function updateCounter() {
   var counter = document.getElementById("contador");
   counter.textContent = "Total: " + total + "\u20AC";
+
+  var counter2 = document.getElementById("contador2");
+  counter2.textContent = "Total: " + total + "\u20AC";
+
 }
 // Ricardo
 function reseteoCesta(){
@@ -127,9 +139,54 @@ function reseteoCesta(){
 
   while(contenedor.firstChild){
     contenedor.removeChild(contenedor.firstChild)
+  }
+
+  // esto es un poco chapucero hacerlo 2 veces pero se queda asi
+  let contenedor2 = document.getElementById("checkResumen")
+  
+  while(contenedor2.firstChild){
+    contenedor2.removeChild(contenedor2.firstChild)
 
   }
+  // Vamos a meter de nuevo el p
+  let packs_escogidos = document.createElement("p")
+  let checkResumen = document.getElementById("checkResumen")
+  packs_escogidos.textContent = "Packs escogidos"
+  checkResumen.append(packs_escogidos)
 
 }
 
+// Checkout
 
+function abrirCheck(){
+  // Cogemos el div principal y lo hacemos aparecer
+  let checkDiv = document.getElementById("checkDiv")
+  checkDiv.style.display = "flex"
+
+  // Movemos el botón (en verdad son 2)
+  // Desaparecemos el anterior
+  let boton_checkout = document.getElementById("checkout")
+  boton_checkout.style.display = "none"
+}
+
+function cerrarCheck(){
+  let checkDiv = document.getElementById("checkDiv")
+  let boton_checkout = document.getElementById("checkout")
+
+  checkDiv.style.display = "none"
+  boton_checkout.style.display = "inline"
+}
+
+function enviarCheck(){
+  let nombreInput = document.getElementById("nombre")
+  let emailInput = document.getElementById("email")
+  let informativo = document.getElementById("informativo")
+
+  if (nombreInput.checkValidity() && emailInput.checkValidity()){
+    reseteoCesta()
+    cerrarCheck()
+    informativo.textContent = "Proceda al correo introducido para seguir con el proceso de pago"
+  }else {
+    informativo.textContent = "Porfavor, rellene los formularios"
+  }
+}
